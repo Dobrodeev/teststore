@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>КанцМаркет Киев — Канцтовары с доставкой по Киеву</title>
+  <meta name="description" content="Интернет-магазин канцтоваров в Киеве. Ручки, тетради, папки, бумага, маркеры, товары для рисования. Доставка по Киеву и Украине.">
+  <meta name="keywords" content="канцтовары Киев, купить канцтовары Киев, ручки карандаши Киев, тетради блокноты Киев, офисные принадлежности Киев">
+  <link rel="canonical" href="https://kanzmarket.kiev.ua/">
+  <meta property="og:title" content="КанцМаркет — Канцтовары в Киеве">
+  <meta property="og:description" content="Широкий выбор канцтоваров с доставкой по Киеву. Более 500 позиций.">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Store","name":"КанцМаркет","description":"Интернет-магазин канцтоваров в Киеве","url":"https://kanzmarket.kiev.ua","telephone":"+380441234567","address":{"@type":"PostalAddress","streetAddress":"ул. Крещатик, 15","addressLocality":"Киев","addressCountry":"UA"},"openingHours":"Mo-Fr 09:00-19:00","priceRange":"от 12 грн"}
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-top">
+    <a href="index.html" class="logo">
+      <div class="logo-icon"><i data-lucide="pencil"></i></div>
+      <div>
+        <div class="logo-text">Канц<span>Маркет</span></div>
+        <div class="logo-sub">Канцтовары в Киеве</div>
+      </div>
+    </a>
+    <form class="search-box" id="search-form" role="search">
+      <input type="text" id="search-input" placeholder="Найти ручки, тетради, маркеры..." aria-label="Поиск">
+      <button type="submit" aria-label="Найти"><i data-lucide="search"></i></button>
+    </form>
+    <div class="header-actions">
+      <a href="kontakty.html" class="btn-icon">
+        <i data-lucide="phone"></i>
+        <span>Контакты</span>
+      </a>
+      <button class="btn-icon cart-btn" onclick="openCart()" aria-label="Корзина">
+        <i data-lucide="shopping-cart"></i>
+        <span>Корзина</span>
+        <span class="cart-count" style="display:none">0</span>
+      </button>
+    </div>
+    <button class="burger" id="burger" aria-label="Меню">
+      <i data-lucide="menu"></i>
+    </button>
+  </div>
+  <nav class="header-nav" id="header-nav">
+    <div class="container">
+      <a href="index.html" class="active">Главная</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="catalog.html?cat=ruchki">Ручки</a>
+      <a href="catalog.html?cat=tetradi">Тетради</a>
+      <a href="catalog.html?cat=bumaga">Бумага</a>
+      <a href="catalog.html?cat=ofis">Офис</a>
+      <a href="catalog.html?cat=risovanie">Рисование</a>
+      <a href="o-nas.html">О нас</a>
+      <a href="kontakty.html">Контакты</a>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="hero-tag">
+        <i data-lucide="map-pin"></i>
+        Магазин в Киеве + Доставка
+      </span>
+      <h1>Всё для офиса,<br>школы и <span>творчества</span></h1>
+      <p class="hero-sub">Более 500 наименований канцтоваров. Ручки, тетради, маркеры, папки, товары для рисования. Быстрая доставка по Киеву — от 2 часов.</p>
+      <div class="hero-actions">
+        <a href="catalog.html" class="btn btn-primary">Перейти в каталог</a>
+        <a href="kontakty.html" class="btn btn-outline">
+          <i data-lucide="phone"></i> Написать нам
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-val">500+</div>
+          <div class="stat-lbl">Товаров</div>
+        </div>
+        <div>
+          <div class="stat-val">2 ч</div>
+          <div class="stat-lbl">Доставка по Киеву</div>
+        </div>
+        <div>
+          <div class="stat-val">3 000+</div>
+          <div class="stat-lbl">Клиентов</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hero-card-icon" style="background:#EFF6FF; color:#2563EB;">
+          <i data-lucide="pencil"></i>
+        </div>
+        <h3>Ручки и карандаши</h3>
+        <p>BIC, Pilot, Faber-Castell, Lamy</p>
+        <div class="hero-card-price">от 12 грн</div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-icon" style="background:#F0FDF4; color:#16A34A;">
+          <i data-lucide="book-open"></i>
+        </div>
+        <h3>Тетради</h3>
+        <p>48, 96 л. — А4, А5</p>
+        <div class="hero-card-price">от 65 грн</div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-icon" style="background:#FDF2F8; color:#EC4899;">
+          <i data-lucide="palette"></i>
+        </div>
+        <h3>Рисование</h3>
+        <p>Краски, кисти, пастель</p>
+        <div class="hero-card-price">от 95 грн</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- КАТЕГОРИИ -->
+<section class="section section-white">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">Категории товаров</h2>
+        <p class="section-sub">Найдите всё необходимое для работы, учёбы и творчества</p>
+      </div>
+    </div>
+    <div class="categories-grid" id="categories-grid">
+      <!-- заполняется из JSON -->
+    </div>
+  </div>
+</section>
+
+<!-- ХИТЫ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">Хиты продаж</h2>
+        <p class="section-sub">Самые популярные товары среди покупателей</p>
+      </div>
+      <a href="catalog.html" class="btn btn-outline btn-sm">Весь каталог →</a>
+    </div>
+    <div class="products-grid" id="hits-grid">
+      <!-- заполняется из JSON -->
+    </div>
+  </div>
+</section>
+
+<!-- БАННЕР АКЦИЯ -->
+<section style="padding:0 20px 56px;">
+  <div class="container">
+    <div class="promo-banner">
+      <div class="promo-banner-icon">
+        <i data-lucide="tag"></i>
+      </div>
+      <div class="promo-banner-text">
+        <h2>Скидка до 30% на школьные товары</h2>
+        <p>Акция действует на весь ассортимент тетрадей, ручек и рюкзаков. Только в Киеве.</p>
+      </div>
+      <a href="catalog.html?badge=Скидка" class="btn btn-white">Смотреть акции</a>
+    </div>
+  </div>
+</section>
+
+<!-- ТОП-ТОВАРЫ -->
+<section class="section section-white">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">Топ-товары</h2>
+        <p class="section-sub">Товары с лучшими отзывами наших покупателей</p>
+      </div>
+      <a href="catalog.html" class="btn btn-outline btn-sm">Все товары →</a>
+    </div>
+    <div class="products-grid" id="top-grid">
+      <!-- заполняется из JSON -->
+    </div>
+  </div>
+</section>
+
+<!-- ПРЕИМУЩЕСТВА -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title" style="text-align:center; margin-bottom:32px;">Почему покупают у нас</h2>
+    <div class="advantages-grid">
+      <div class="adv-card">
+        <div class="adv-icon-wrap"><i data-lucide="truck"></i></div>
+        <div class="adv-title">Доставка за 2 часа</div>
+        <div class="adv-desc">Быстрая доставка по Киеву от 2 часов. Новая Почта — по Украине.</div>
+      </div>
+      <div class="adv-card">
+        <div class="adv-icon-wrap"><i data-lucide="shield-check"></i></div>
+        <div class="adv-title">Гарантия качества</div>
+        <div class="adv-desc">Только оригинальные товары от проверенных брендов: BIC, Pilot, Faber-Castell.</div>
+      </div>
+      <div class="adv-card">
+        <div class="adv-icon-wrap"><i data-lucide="credit-card"></i></div>
+        <div class="adv-title">Удобная оплата</div>
+        <div class="adv-desc">Наличными, картой, Приватбанк, MonoBank, оплата при получении.</div>
+      </div>
+      <div class="adv-card">
+        <div class="adv-icon-wrap"><i data-lucide="headphones"></i></div>
+        <div class="adv-title">Поддержка 9–19</div>
+        <div class="adv-desc">Консультация по ассортименту. Пн–Пт 09:00–19:00, Сб 10:00–17:00.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-about">
+      <div class="footer-logo">
+        <div class="logo-icon"><i data-lucide="pencil"></i></div>
+        <div class="logo-text">Канц<span>Маркет</span></div>
+      </div>
+      <p>Интернет-магазин канцтоваров в Киеве. Ручки, тетради, бумага, маркеры, товары для рисования и офиса.</p>
+    </div>
+    <div>
+      <h4>Каталог</h4>
+      <ul>
+        <li><a href="catalog.html?cat=ruchki">Ручки и карандаши</a></li>
+        <li><a href="catalog.html?cat=tetradi">Тетради и блокноты</a></li>
+        <li><a href="catalog.html?cat=papki">Папки и файлы</a></li>
+        <li><a href="catalog.html?cat=bumaga">Бумага и картон</a></li>
+        <li><a href="catalog.html?cat=markery">Маркеры</a></li>
+        <li><a href="catalog.html?cat=risovanie">Рисование</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Информация</h4>
+      <ul>
+        <li><a href="o-nas.html">О нас</a></li>
+        <li><a href="kontakty.html">Контакты</a></li>
+        <li><a href="kontakty.html">Доставка</a></li>
+        <li><a href="politika.html">Политика конфиденциальности</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Контакты</h4>
+      <ul>
+        <li><a href="tel:+380441234567" class="footer-phone">044 123-45-67</a></li>
+        <li><a href="mailto:info@kanzmarket.kiev.ua">info@kanzmarket.kiev.ua</a></li>
+        <li style="color:#64748B; font-size:13px; margin-top:8px;">Киев, ул. Крещатик, 15</li>
+        <li style="color:#64748B; font-size:13px; margin-top:4px;">Пн–Пт: 09:00–19:00</li>
+        <li style="color:#64748B; font-size:13px;">Сб: 10:00–17:00</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 КанцМаркет — Канцтовары в Киеве</span>
+    <a href="politika.html">Политика конфиденциальности</a>
+  </div>
+</footer>
+
+<!-- КОРЗИНА -->
+<div class="cart-overlay" id="cart-overlay"></div>
+<div class="cart-panel" id="cart-panel">
+  <div class="cart-header">
+    <h3><i data-lucide="shopping-cart"></i> Корзина</h3>
+    <button class="cart-close" onclick="closeCart()"><i data-lucide="x"></i></button>
+  </div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Итого:</span>
+      <span class="cart-total-val" id="cart-total">0 грн</span>
+    </div>
+    <a href="kontakty.html" class="btn btn-primary btn-full" onclick="closeCart()">Оформить заказ</a>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+<script>
+  async function loadHome() {
+    const [cats, prods] = await Promise.all([
+      fetch('data/categories.json').then(r => r.json()),
+      fetch('data/products.json').then(r => r.json())
+    ]);
+    _products = prods;
+
+    // Категории
+    document.getElementById('categories-grid').innerHTML = cats.map(c =>
+      `<a href="catalog.html?cat=${c.id}" class="cat-card">
+        <div class="cat-svg-wrap"><i data-lucide="${c.lucideIcon}"></i></div>
+        <div class="cat-name">${c.name}</div>
+        <div class="cat-desc">${c.desc}</div>
+      </a>`
+    ).join('');
+
+    // Хиты и скидки
+    const hits = prods.filter(p => p.badge === 'Хит' || p.badge === 'Скидка').slice(0, 4);
+    document.getElementById('hits-grid').innerHTML = hits.map(renderProductCard).join('');
+
+    // Топ
+    const top = prods.filter(p => p.badge === 'Топ').concat(prods.filter(p => !p.badge)).slice(0, 4);
+    document.getElementById('top-grid').innerHTML = top.map(renderProductCard).join('');
+
+    refreshIcons();
+  }
+  loadHome();
+</script>
+</body>
+</html>

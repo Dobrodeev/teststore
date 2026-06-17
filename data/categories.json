@@ -1,0 +1,10 @@
+[
+  { "id": "ruchki",    "name": "Ручки и карандаши",  "lucideIcon": "pen",        "desc": "Шариковые, гелевые, перьевые ручки и карандаши" },
+  { "id": "tetradi",   "name": "Тетради и блокноты", "lucideIcon": "book-open",  "desc": "Тетради, блокноты, ежедневники, скетчбуки" },
+  { "id": "papki",     "name": "Папки и файлы",      "lucideIcon": "folder",     "desc": "Папки, скоросшиватели, архивные коробки" },
+  { "id": "bumaga",    "name": "Бумага и картон",    "lucideIcon": "file-text",  "desc": "Офисная бумага, цветной картон, стикеры" },
+  { "id": "markery",   "name": "Маркеры",            "lucideIcon": "highlighter","desc": "Маркеры для досок, выделители, фломастеры" },
+  { "id": "ofis",      "name": "Офисные мелочи",     "lucideIcon": "paperclip",  "desc": "Скрепки, степлеры, ножницы, линейки, клей" },
+  { "id": "ryukzaki",  "name": "Рюкзаки и сумки",   "lucideIcon": "backpack",   "desc": "Школьные рюкзаки, сумки для документов" },
+  { "id": "risovanie", "name": "Рисование",          "lucideIcon": "palette",    "desc": "Краски, кисти, пастель, цветные карандаши" }
+]

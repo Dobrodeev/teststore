@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1, "category": "ruchki", "name": "Ручка шариковая BIC Cristal",
+    "desc": "Классическая прозрачная шариковая ручка. Синие чернила. Толщина линии 0,4 мм.",
+    "price": 12, "oldPrice": null, "unit": "шт", "inStock": true, "badge": null,
+    "icon": "pen", "iconColor": "#2563EB", "color": "#EFF6FF"
+  },
+  {
+    "id": 2, "category": "ruchki", "name": "Ручка гелевая Pilot G-2",
+    "desc": "Гелевая ручка с нажимным механизмом. Ультра-гладкое письмо. Синяя.",
+    "price": 55, "oldPrice": 70, "unit": "шт", "inStock": true, "badge": "Хит",
+    "icon": "pen", "iconColor": "#059669", "color": "#F0FDF4"
+  },
+  {
+    "id": 3, "category": "ruchki", "name": "Карандаш Faber-Castell HB (6 шт)",
+    "desc": "Карандаш с мягким грифелем HB. Идеально для письма и рисования. В наборе 6 шт.",
+    "price": 65, "oldPrice": null, "unit": "набор", "inStock": true, "badge": null,
+    "icon": "pencil", "iconColor": "#D97706", "color": "#FFFBEB"
+  },
+  {
+    "id": 4, "category": "ruchki", "name": "Ручка перьевая Lamy Safari",
+    "desc": "Элегантная перьевая ручка для письма. Эргономичный корпус, перо EF.",
+    "price": 890, "oldPrice": 1100, "unit": "шт", "inStock": true, "badge": "Скидка",
+    "icon": "pen-tool", "iconColor": "#7C3AED", "color": "#F5F3FF"
+  },
+  {
+    "id": 5, "category": "ruchki", "name": "Механический карандаш 0.5 мм",
+    "desc": "Механический карандаш с мягким резиновым держателем. Грифели 0,5 мм в комплекте.",
+    "price": 85, "oldPrice": null, "unit": "шт", "inStock": true, "badge": null,
+    "icon": "pencil", "iconColor": "#0284C7", "color": "#F0F9FF"
+  },
+  {
+    "id": 6, "category": "tetradi", "name": "Тетрадь 96 листов A5 клетка",
+    "desc": "Тетрадь в клетку на пружине. Плотная обложка, белая бумага 70 г/м².",
+    "price": 65, "oldPrice": null, "unit": "шт", "inStock": true, "badge": null,
+    "icon": "book", "iconColor": "#059669", "color": "#F0FDF4"
+  },
+  {
+    "id": 7, "category": "tetradi", "name": "Ежедневник датированный A5 2026",
+    "desc": "Датированный ежедневник на 2026 год. Твёрдая обложка, закладка-ляссе.",
+    "price": 245, "oldPrice": 320, "unit": "шт", "inStock": true, "badge": "Скидка",
+    "icon": "calendar", "iconColor": "#D97706", "color": "#FFFBEB"
+  },
+  {
+    "id": 8, "category": "tetradi", "name": "Блокнот в точку A5 Leuchtturm",
+    "desc": "Блокнот в точку для bullet journal. 251 страница, нумерация, оглавление.",
+    "price": 480, "oldPrice": null, "unit": "шт", "inStock": true, "badge": "Топ",
+    "icon": "book-open", "iconColor": "#7C3AED", "color": "#F5F3FF"
+  },
+  {
+    "id": 9, "category": "tetradi", "name": "Скетчбук A4 для акварели",
+    "desc": "Скетчбук с бумагой для акварели 200 г/м². 40 листов, мягкая обложка.",
+    "price": 195, "oldPrice": null, "unit": "шт", "inStock": true, "badge": null,
+    "icon": "image", "iconColor": "#0284C7", "color": "#F0F9FF"
+  },
+  {
+    "id": 10, "category": "tetradi", "name": "Тетрадь 48л A4 линейка (5 шт)",
+    "desc": "Упаковка из 5 тетрадей в линейку. Офсетная бумага, цветные обложки.",
+    "price": 110, "oldPrice": 150, "unit": "уп", "inStock": true, "badge": "Скидка",
+    "icon": "book-copy", "iconColor": "#059669", "color": "#F0FDF4"
+  },
+  {
+    "id": 11, "category": "papki", "name": "Папка-скоросшиватель А4 ПВХ",
+    "desc": "Папка с прозрачной обложкой и перфорированным вкладышем. Цвет: ассорти.",
+    "price": 35, "oldPrice": null, "unit": "шт", "inStock": true, "badge": null,
+    "icon": "folder", "iconColor": "#D97706", "color": "#FFFBEB"
+  },
+  {
+    "id": 12, "category": "papki", "name": "Архивная коробка 75 мм",
+    "desc": "Архивная коробка из плотного картона. Корешок с окном для подписи. А4.",
+    "price": 85, "oldPrice": null, "unit": "шт", "inStock": true, "badge": null,
+    "icon": "archive", "iconColor": "#64748B", "color": "#F8FAFC"
+  },
+  {
+    "id": 13, "category": "papki", "name": "Файл-вкладыш А4 40 мкм (100 шт)",
+    "desc": "Прозрачные полипропиленовые файлы для документов. Упаковка 100 штук.",
+    "price": 125, "oldPrice": 160, "unit": "уп", "inStock": true, "badge": "Хит",
+    "icon": "file", "iconColor": "#0284C7", "color": "#F0F9FF"
+  },
+  {
+    "id": 14, "category": "papki", "name": "Папка на молнии B5",
+    "desc": "Папка-органайзер на молнии. Отделения для документов, визиток и ручек.",
+    "price": 220, "oldPrice": null, "unit": "шт", "inStock": false, "badge": null,
+    "icon": "folder-open", "iconColor": "#7C3AED", "color": "#F5F3FF"
+  },
+  {
+    "id": 15, "category": "bumaga", "name": "Бумага офисная А4 80 г/м² 500 л",
+    "desc": "Офисная бумага высшего сорта. Белизна 146%. Подходит для всех типов принтеров.",
+    "price": 175, "oldPrice": 210, "unit": "пачка", "inStock": true, "badge": "Скидка",
+    "icon": "file-text", "iconColor": "#64748B", "color": "#F8FAFC"
+  },
+  {
+    "id": 16, "category": "bumaga", "name": "Стикеры самоклеящиеся 76×76 мм",
+    "desc": "Стикеры неоновых цветов 4 цвета по 25 листов. Мощный клей, легко снимаются.",
+    "price": 55, "oldPrice": null, "unit": "набор", "inStock": true, "badge": null,
+    "icon": "sticky-note", "iconColor": "#D97706", "color": "#FFFBEB"
+  },
+  {
+    "id": 17, "category": "bumaga", "name": "Цветной картон А4 10 цветов",
+    "desc": "Набор цветного картона 220 г/м². 10 цветов по 5 листов. Для творчества.",
+    "price": 95, "oldPrice": null, "unit": "набор", "inStock": true, "badge": null,
+    "icon": "layers", "iconColor": "#EC4899", "color": "#FDF2F8"
+  },
+  {
+    "id": 18, "category": "markery", "name": "Маркер для доски Centropen (4 цв)",
+    "desc": "Маркеры для белых досок. Легко стираются. Набор: чёрный, красный, синий, зелёный.",
+    "price": 145, "oldPrice": null, "unit": "набор", "inStock": true, "badge": "Топ",
+    "icon": "pen-line", "iconColor": "#059669", "color": "#F0FDF4"
+  },
+  {
+    "id": 19, "category": "markery", "name": "Текстовыделитель Staedtler (5 цв)",
+    "desc": "Набор текстовыделителей с мягким наконечником. Флуоресцентные чернила.",
+    "price": 135, "oldPrice": 175, "unit": "набор", "inStock": true, "badge": "Скидка",
+    "icon": "highlighter", "iconColor": "#D97706", "color": "#FFFBEB"
+  },
+  {
+    "id": 20, "category": "markery", "name": "Фломастеры 24 цвета для детей",
+    "desc": "Толстые фломастеры с безопасными чернилами. Яркие цвета, долговечные.",
+    "price": 185, "oldPrice": null, "unit": "набор", "inStock": true, "badge": null,
+    "icon": "paintbrush-2", "iconColor": "#EC4899", "color": "#FDF2F8"
+  },
+  {
+    "id": 21, "category": "ofis", "name": "Степлер Rapid Classic №24",
+    "desc": "Металлический степлер на 20 листов. Скобы №24/6 в комплекте (1000 шт).",
+    "price": 195, "oldPrice": 250, "unit": "шт", "inStock": true, "badge": "Скидка",
+    "icon": "zap", "iconColor": "#64748B", "color": "#F8FAFC"
+  },
+  {
+    "id": 22, "category": "ofis", "name": "Ножницы офисные 21 см",
+    "desc": "Офисные ножницы с эргономичными ручками. Нержавеющие лезвия.",
+    "price": 75, "oldPrice": null, "unit": "шт", "inStock": true, "badge": null,
+    "icon": "scissors", "iconColor": "#DC2626", "color": "#FEF2F2"
+  },
+  {
+    "id": 23, "category": "ofis", "name": "Клей-карандаш Glue Stick 40 г",
+    "desc": "Прозрачный клей-карандаш для бумаги. Быстро сохнет, не коробит бумагу.",
+    "price": 45, "oldPrice": null, "unit": "шт", "inStock": true, "badge": null,
+    "icon": "droplets", "iconColor": "#0284C7", "color": "#F0F9FF"
+  },
+  {
+    "id": 24, "category": "ofis", "name": "Скрепки канцелярские 50 мм (100 шт)",
+    "desc": "Металлические скрепки оцинкованные. Коробка 100 штук. Размер 50 мм.",
+    "price": 28, "oldPrice": null, "unit": "коробка", "inStock": true, "badge": "Хит",
+    "icon": "paperclip", "iconColor": "#64748B", "color": "#F8FAFC"
+  },
+  {
+    "id": 25, "category": "ofis", "name": "Линейка 30 см пластиковая",
+    "desc": "Прозрачная пластиковая линейка с двойной разметкой. Антискользящий край.",
+    "price": 22, "oldPrice": null, "unit": "шт", "inStock": true, "badge": null,
+    "icon": "ruler", "iconColor": "#059669", "color": "#F0FDF4"
+  },
+  {
+    "id": 26, "category": "ryukzaki", "name": "Рюкзак школьный для 1–4 класса",
+    "desc": "Анатомический рюкзак с жёсткой спинкой. Объём 18 л. Светоотражатели.",
+    "price": 1250, "oldPrice": 1600, "unit": "шт", "inStock": true, "badge": "Скидка",
+    "icon": "backpack", "iconColor": "#0284C7", "color": "#F0F9FF"
+  },
+  {
+    "id": 27, "category": "ryukzaki", "name": "Пенал мягкий с наполнением 17 пр",
+    "desc": "Школьный пенал с 17 предметами: ручки, карандаши, ластик, линейка, ножницы.",
+    "price": 345, "oldPrice": null, "unit": "шт", "inStock": true, "badge": "Топ",
+    "icon": "box", "iconColor": "#7C3AED", "color": "#F5F3FF"
+  },
+  {
+    "id": 28, "category": "risovanie", "name": "Акварель художественная 24 цвета",
+    "desc": "Профессиональные акварельные краски в пластиковой коробке. Яркие пигменты.",
+    "price": 385, "oldPrice": 480, "unit": "набор", "inStock": true, "badge": "Скидка",
+    "icon": "palette", "iconColor": "#EC4899", "color": "#FDF2F8"
+  },
+  {
+    "id": 29, "category": "risovanie", "name": "Цветные карандаши 36 цв Koh-i-Noor",
+    "desc": "Художественные цветные карандаши в металлической коробке. Мягкий грифель.",
+    "price": 520, "oldPrice": null, "unit": "набор", "inStock": true, "badge": "Топ",
+    "icon": "pencil", "iconColor": "#7C3AED", "color": "#F5F3FF"
+  },
+  {
+    "id": 30, "category": "risovanie", "name": "Набор кистей для акварели 10 шт",
+    "desc": "Профессиональные кисти из синтетики. Набор: от №1 до №14. Длинная ручка.",
+    "price": 275, "oldPrice": null, "unit": "набор", "inStock": true, "badge": null,
+    "icon": "brush", "iconColor": "#059669", "color": "#F0FDF4"
+  }
+]

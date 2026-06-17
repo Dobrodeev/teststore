@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты — КанцМаркет Киев</title>
+  <meta name="description" content="Контакты КанцМаркет: телефон 044 123-45-67, Киев, ул. Крещатик 15. Заказ канцтоваров онлайн.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="header-top">
+    <a href="index.html" class="logo">
+      <div class="logo-icon"><i data-lucide="pencil"></i></div>
+      <div>
+        <div class="logo-text">Канц<span>Маркет</span></div>
+        <div class="logo-sub">Канцтовары в Киеве</div>
+      </div>
+    </a>
+    <form class="search-box" id="search-form" role="search">
+      <input type="text" id="search-input" placeholder="Найти товар..." aria-label="Поиск">
+      <button type="submit" aria-label="Найти"><i data-lucide="search"></i></button>
+    </form>
+    <div class="header-actions">
+      <button class="btn-icon cart-btn" onclick="openCart()" aria-label="Корзина">
+        <i data-lucide="shopping-cart"></i>
+        <span>Корзина</span>
+        <span class="cart-count" style="display:none">0</span>
+      </button>
+    </div>
+    <button class="burger" id="burger" aria-label="Меню">
+      <i data-lucide="menu"></i>
+    </button>
+  </div>
+  <nav class="header-nav" id="header-nav">
+    <div class="container">
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="o-nas.html">О нас</a>
+      <a href="kontakty.html" class="active">Контакты</a>
+    </div>
+  </nav>
+</header>
+
+<div class="breadcrumb">
+  <div class="container">
+    <a href="index.html">Главная</a>
+    <i data-lucide="chevron-right"></i>
+    <span>Контакты</span>
+  </div>
+</div>
+
+<section class="section section-white">
+  <div class="container">
+    <h1 style="font-size:clamp(22px,4vw,34px); font-weight:800; margin-bottom:8px;">Контакты и заказ</h1>
+    <p style="color:var(--gray); margin-bottom:36px;">Свяжитесь с нами любым удобным способом или оставьте заявку онлайн</p>
+
+    <div class="contacts-grid">
+      <!-- Контактная информация -->
+      <div class="contact-block">
+        <h3>Наши контакты</h3>
+        <div class="contact-row">
+          <div class="contact-icon-wrap"><i data-lucide="phone"></i></div>
+          <div>
+            <div class="contact-label">Телефон для заказов</div>
+            <div class="contact-val"><a href="tel:+380441234567">044 123-45-67</a></div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon-wrap"><i data-lucide="smartphone"></i></div>
+          <div>
+            <div class="contact-label">Viber / WhatsApp</div>
+            <div class="contact-val"><a href="tel:+380671234567">067 123-45-67</a></div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon-wrap"><i data-lucide="mail"></i></div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-val"><a href="mailto:info@kanzmarket.kiev.ua">info@kanzmarket.kiev.ua</a></div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon-wrap"><i data-lucide="map-pin"></i></div>
+          <div>
+            <div class="contact-label">Адрес</div>
+            <div class="contact-val">Киев, ул. Крещатик, 15, офис 4<br><small style="color:var(--gray);">м. Крещатик, 2 мин. пешком</small></div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon-wrap"><i data-lucide="clock"></i></div>
+          <div>
+            <div class="contact-label">Часы работы</div>
+            <div class="contact-val" style="font-weight:400;">
+              Пн–Пт: 09:00–19:00<br>
+              Суббота: 10:00–17:00<br>
+              <span style="color:var(--gray); font-size:13px;">Воскресенье: выходной</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Карта-заглушка -->
+        <div style="margin-top:20px; background:var(--gray-light); border-radius:var(--radius); height:160px; display:flex; align-items:center; justify-content:center; text-align:center; border:1px solid var(--border);">
+          <div>
+            <div class="adv-icon-wrap" style="margin:0 auto 10px;"><i data-lucide="map"></i></div>
+            <p style="font-size:13px; color:var(--gray);">Киев, ул. Крещатик, 15</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Форма заказа -->
+      <div class="contact-block" id="order-form">
+        <h3>Оформить заказ / задать вопрос</h3>
+        <p style="color:var(--gray); font-size:13px; margin-bottom:20px;">Оставьте заявку — ответим в течение 15 минут в рабочее время</p>
+        <form onsubmit="submitOrder(event)">
+          <div class="form-group">
+            <label>Ваше имя *</label>
+            <input type="text" id="f-name" placeholder="Иван Петрович" required>
+          </div>
+          <div class="form-group">
+            <label>Телефон *</label>
+            <input type="tel" id="f-phone" placeholder="+38 0XX XXX XX XX" required>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="f-email" placeholder="email@example.com">
+          </div>
+          <div class="form-group">
+            <label>Тип запроса</label>
+            <select id="f-type">
+              <option>Заказ товаров</option>
+              <option>Корпоративная поставка</option>
+              <option>Уточнение наличия</option>
+              <option>Другое</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Сообщение</label>
+            <textarea id="f-msg" placeholder="Опишите, что вас интересует: список товаров, количество, срочность..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Отправить заявку</button>
+          <p class="form-note" style="margin-top:10px;">Нажимая кнопку, вы соглашаетесь с <a href="politika.html">политикой конфиденциальности</a></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Доставка -->
+    <div style="margin-top:50px;">
+      <h2 style="font-size:22px; font-weight:800; margin-bottom:20px;">Доставка и оплата</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px;">
+        <div class="adv-card">
+          <div class="adv-icon-wrap"><i data-lucide="bike"></i></div>
+          <div class="adv-title">Курьер по Киеву</div>
+          <div class="adv-desc">Доставка от 2 часов. Стоимость 80 грн. Бесплатно при заказе от 800 грн.</div>
+        </div>
+        <div class="adv-card">
+          <div class="adv-icon-wrap"><i data-lucide="package"></i></div>
+          <div class="adv-title">Новая Почта</div>
+          <div class="adv-desc">Доставка по Украине. Тарифы перевозчика. 1–2 рабочих дня.</div>
+        </div>
+        <div class="adv-card">
+          <div class="adv-icon-wrap"><i data-lucide="store"></i></div>
+          <div class="adv-title">Самовывоз</div>
+          <div class="adv-desc">Бесплатно. Киев, ул. Крещатик 15. Товар готов через 1 час.</div>
+        </div>
+        <div class="adv-card">
+          <div class="adv-icon-wrap"><i data-lucide="credit-card"></i></div>
+          <div class="adv-title">Оплата</div>
+          <div class="adv-desc">Наличными, картой Visa/MasterCard, Приват24, MonoBank. Оплата при получении.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-bottom" style="max-width:1160px; margin:0 auto; padding:24px 20px; border-top:none; justify-content:center;">
+    <span>© 2026 КанцМаркет — <a href="index.html" style="color:#64748B">Канцтовары в Киеве</a></span>
+  </div>
+</footer>
+
+<div class="cart-overlay" id="cart-overlay"></div>
+<div class="cart-panel" id="cart-panel">
+  <div class="cart-header">
+    <h3><i data-lucide="shopping-cart"></i> Корзина</h3>
+    <button class="cart-close" onclick="closeCart()"><i data-lucide="x"></i></button>
+  </div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-footer">
+    <div class="cart-total"><span>Итого:</span><span class="cart-total-val" id="cart-total">0 грн</span></div>
+    <a href="kontakty.html" class="btn btn-primary btn-full" onclick="closeCart()">Оформить заказ</a>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+<script>
+  function submitOrder(e) {
+    e.preventDefault();
+    const name = document.getElementById('f-name').value.trim();
+    const phone = document.getElementById('f-phone').value.trim();
+    if (!name || !phone) { toast('Заполните имя и телефон'); return; }
+    toast('Заявка отправлена! Перезвоним в течение 15 минут.');
+    e.target.reset();
+  }
+</script>
+</body>
+</html>
