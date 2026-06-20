@@ -57,8 +57,11 @@ const Cart = {
     } else {
       el.innerHTML = this.items.map(item => `
         <div class="cart-item">
-          <div class="cart-item-thumb" style="background:${item.color}">
-            <i data-lucide="${item.icon}" class="cart-item-icon" style="color:${item.iconColor}"></i>
+          <div class="cart-item-thumb" style="background:${item.color || '#F8FAFC'}">
+            ${item.img
+              ? `<img src="${item.img}" alt="${item.name}" class="cart-item-img">`
+              : `<i data-lucide="${item.icon}" class="cart-item-icon" style="color:${item.iconColor}"></i>`
+            }
           </div>
           <div class="cart-item-info">
             <div class="cart-item-name">${item.name}</div>
@@ -118,9 +121,11 @@ function renderProductCard(p) {
   return `
     <div class="product-card" data-id="${p.id}" data-cat="${p.category}">
       ${p.badge ? `<span class="product-badge ${badgeClass}">${p.badge}</span>` : ''}
-      <div class="product-img" style="background:${p.color}">
-        <div class="product-img-circle"></div>
-        <i data-lucide="${p.icon}" class="product-icon-svg" style="color:${p.iconColor}"></i>
+      <div class="product-img" style="background:${p.color || '#F8FAFC'}">
+        ${p.img
+          ? `<img src="${p.img}" alt="${p.name}" class="product-img-photo" loading="lazy">`
+          : `<div class="product-img-circle"></div><i data-lucide="${p.icon}" class="product-icon-svg" style="color:${p.iconColor}"></i>`
+        }
       </div>
       <div class="product-body">
         <div class="product-name">${p.name}</div>

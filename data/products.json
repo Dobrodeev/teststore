@@ -178,5 +178,285 @@
     "desc": "Профессиональные кисти из синтетики. Набор: от №1 до №14. Длинная ручка.",
     "price": 275, "oldPrice": null, "unit": "набор", "inStock": true, "badge": null,
     "icon": "brush", "iconColor": "#059669", "color": "#F0FDF4"
+  },
+  {
+    "id": 31, "category": "bumaga", "name": "Папір Maestro Standard A4, 80 г/м², 500 арк.",
+    "desc": "Офисная бумага для принтеров и копиров. Белизна 146%, класс C.",
+    "price": 190, "oldPrice": null, "unit": "пачка", "inStock": true, "badge": null,
+    "icon": "file-text", "iconColor": "#64748B", "color": "#F8FAFC",
+    "img": "img/number1/small_mstr.jpg"
+  },
+  {
+    "id": 32, "category": "papki", "name": "Папка «Діло» картонна",
+    "desc": "Папка-скоросшиватель картонная для архивирования документов.",
+    "price": 7, "oldPrice": null, "unit": "шт", "inStock": true, "badge": null,
+    "icon": "folder", "iconColor": "#D97706", "color": "#FFFBEB",
+    "img": "img/number1/small_Papka-delo-karton.jpg"
+  },
+  {
+    "id": 33, "category": "papki", "name": "Папка зі змінними файлами №4 картонна",
+    "desc": "Картонная папка с файлами для документов формата А4.",
+    "price": 16, "oldPrice": null, "unit": "шт", "inStock": true, "badge": null,
+    "icon": "folder", "iconColor": "#D97706", "color": "#FFFBEB",
+    "img": "img/number1/small_Papka-karton.jpg"
+  },
+  {
+    "id": 34, "category": "papki", "name": "Папка спіральна Axent",
+    "desc": "Спиральная папка на кольцах Axent. Плотная картонная обложка.",
+    "price": 18, "oldPrice": null, "unit": "шт", "inStock": true, "badge": null,
+    "icon": "folder-open", "iconColor": "#7C3AED", "color": "#F5F3FF",
+    "img": "img/number1/small_34152730102A1.jpg"
+  },
+  {
+    "id": 35, "category": "ofis", "name": "Скобки для степлера Buromax",
+    "desc": "Скобы для степлера Buromax. Стандартный размер №24/6.",
+    "price": 10, "oldPrice": null, "unit": "коробка", "inStock": true, "badge": null,
+    "icon": "zap", "iconColor": "#64748B", "color": "#F8FAFC",
+    "img": "img/number1/small_BM_8907_07.jpg"
+  },
+  {
+    "id": 36, "category": "markery", "name": "Маркер чорний Delta",
+    "desc": "Перманентный маркер Delta с тонким наконечником. Чёрные чернила.",
+    "price": 10, "oldPrice": null, "unit": "шт", "inStock": true, "badge": null,
+    "icon": "pen-line", "iconColor": "#1E293B", "color": "#F8FAFC",
+    "img": "img/number1/small_D2502_marker.jpg"
+  },
+  {
+    "id": 37, "category": "papki", "name": "Скоросшиватель №4 картонний",
+    "desc": "Картонный скоросшиватель для документов А4. Быстрое крепление.",
+    "price": 9, "oldPrice": null, "unit": "шт", "inStock": true, "badge": null,
+    "icon": "folder", "iconColor": "#059669", "color": "#F0FDF4",
+    "img": "img/number1/small_papka_sprava_shvidkoz.jpg"
+  },
+  {
+    "id": 38, "category": "ruchki", "name": "Олівці кольорові Buromax",
+    "desc": "Цветные карандаши Buromax. Мягкий грифель, яркие цвета.",
+    "price": 21, "oldPrice": null, "unit": "набор", "inStock": true, "badge": null,
+    "icon": "pencil", "iconColor": "#EC4899", "color": "#FDF2F8",
+    "img": "img/number1/small_1901_05fioletova.jpg"
+  },
+  {
+    "id": 39, "category": "papki", "name": "Папка архівна картонна №4",
+    "desc": "Архивная картонная папка А4 с завязками для долгосрочного хранения.",
+    "price": 20, "oldPrice": null, "unit": "шт", "inStock": true, "badge": null,
+    "icon": "archive", "iconColor": "#64748B", "color": "#F8FAFC",
+    "img": "img/number1/small_papka_kart_arh.jpg"
+  },
+  {
+    "id": 40, "category": "ofis", "name": "Ластик Delta Standard",
+    "desc": "Мягкий ластик для карандаша. Не оставляет следов на бумаге.",
+    "price": 3, "oldPrice": null, "unit": "шт", "inStock": true, "badge": null,
+    "icon": "eraser", "iconColor": "#DC2626", "color": "#FEF2F2",
+    "img": "img/number1/small__D9701_1.jpg"
+  },
+  {
+    "id": 41, "category": "ofis", "name": "Скотч клейкий Swift",
+    "desc": "Прозрачный упаковочный скотч Swift. Надёжное склеивание.",
+    "price": 8, "oldPrice": null, "unit": "шт", "inStock": true, "badge": null,
+    "icon": "minus", "iconColor": "#0284C7", "color": "#F0F9FF",
+    "img": "img/number1/small__1165_A_01.jpg"
+  },
+  {
+    "id": 42, "category": "markery", "name": "Текстовиділювач Axent 2537",
+    "desc": "Маркер-выделитель Axent с флуоресцентными чернилами. Скошенный наконечник.",
+    "price": 15, "oldPrice": null, "unit": "шт", "inStock": true, "badge": null,
+    "icon": "highlighter", "iconColor": "#D97706", "color": "#FFFBEB",
+    "img": "img/number1/small__2537_08_A_01.jpg"
+  },
+  {
+    "id": 43, "category": "markery", "name": "Маркер двосторонній Axent Dual",
+    "desc": "Двусторонний маркер Axent Dual. Два наконечника: тонкий и скошенный.",
+    "price": 15, "oldPrice": null, "unit": "шт", "inStock": true, "badge": null,
+    "icon": "pen-line", "iconColor": "#059669", "color": "#F0FDF4",
+    "img": "img/number1/small__2534_04_A_1.jpg"
+  },
+  {
+    "id": 44, "category": "markery", "name": "Маркер Axent Welle",
+    "desc": "Перманентный маркер Axent Welle. Водостойкие чернила, тонкое письмо.",
+    "price": 20, "oldPrice": null, "unit": "шт", "inStock": true, "badge": null,
+    "icon": "pen-line", "iconColor": "#7C3AED", "color": "#F5F3FF",
+    "img": "img/number1/small__5550_09_A_.jpg"
+  },
+  {
+    "id": 45, "category": "markery", "name": "Маркер Buromax BM.4490",
+    "desc": "Антистатический маркер Buromax для офиса. Чёрные чернила.",
+    "price": 20, "oldPrice": null, "unit": "шт", "inStock": true, "badge": null,
+    "icon": "pen-line", "iconColor": "#1E293B", "color": "#F8FAFC",
+    "img": "img/number1/small_antist_BM_4490_02.jpg"
+  },
+  {
+    "id": 46, "category": "markery", "name": "Маркер Maped Start",
+    "desc": "Яркий маркер Maped Start для рисования и письма. Насыщенные цвета.",
+    "price": 45, "oldPrice": null, "unit": "шт", "inStock": true, "badge": null,
+    "icon": "highlighter", "iconColor": "#EC4899", "color": "#FDF2F8",
+    "img": "img/number1/small__MP_370111.jpg"
+  },
+  {
+    "id": 47, "category": "ofis", "name": "Магнітна дошка SILVER Buromax",
+    "desc": "Магнитная маркерная доска Buromax SILVER. Для записей и заметок.",
+    "price": 8, "oldPrice": null, "unit": "шт", "inStock": true, "badge": null,
+    "icon": "layout-dashboard", "iconColor": "#64748B", "color": "#F8FAFC",
+    "img": "img/number1/small__BM_4730_24.jpg"
+  },
+  {
+    "id": 48, "category": "papki", "name": "Скоросшиватель А5 Buromax",
+    "desc": "Скоросшиватель формата А5 Buromax. Яркие цвета, надёжные скобы.",
+    "price": 8, "oldPrice": null, "unit": "шт", "inStock": true, "badge": null,
+    "icon": "folder", "iconColor": "#0284C7", "color": "#F0F9FF",
+    "img": "img/number1/small_A5_BM_3312_07.jpg"
+  },
+  {
+    "id": 49, "category": "ruchki", "name": "Точилка з контейнером Skyfall",
+    "desc": "Точилка с контейнером Skyfall. Два отверстия, прозрачный резервуар.",
+    "price": 12, "oldPrice": null, "unit": "шт", "inStock": true, "badge": null,
+    "icon": "pencil", "iconColor": "#D97706", "color": "#FFFBEB",
+    "img": "img/number1/small_tochilka_1156_A_2.jpg"
+  },
+  {
+    "id": 50, "category": "ruchki", "name": "Точилка Axent Lighter",
+    "desc": "Компактная точилка Axent Lighter. Лёгкая и удобная для школы.",
+    "price": 6, "oldPrice": null, "unit": "шт", "inStock": true, "badge": null,
+    "icon": "pencil", "iconColor": "#059669", "color": "#F0FDF4",
+    "img": "img/number1/small_tochilka_1155_A_1.jpg"
+  },
+  {
+    "id": 51, "category": "markery", "name": "Фломастери JOBMAX BM.4101, 10 кол.",
+    "desc": "Фломастеры Buromax JOBMAX в наборе 10 цветов. Яркие, долговечные.",
+    "price": 44, "oldPrice": null, "unit": "набор", "inStock": true, "badge": null,
+    "icon": "paintbrush-2", "iconColor": "#0284C7", "color": "#F0F9FF",
+    "img": "img/number1/small__BM_4101_01.jpg"
+  },
+  {
+    "id": 52, "category": "markery", "name": "Фломастери MINI Pastelini, 10 кол.",
+    "desc": "Мини-фломастеры Axent Pastelini в пастельных тонах. 10 цветов.",
+    "price": 47, "oldPrice": null, "unit": "набор", "inStock": true, "badge": null,
+    "icon": "paintbrush-2", "iconColor": "#EC4899", "color": "#FDF2F8",
+    "img": "img/number1/small__4910_10.jpg"
+  },
+  {
+    "id": 53, "category": "markery", "name": "Фломастери Ultra Axent, 10+ кол.",
+    "desc": "Фломастеры Axent Ultra с насыщенными чернилами. Набор 10+ цветов.",
+    "price": 72, "oldPrice": null, "unit": "набор", "inStock": true, "badge": "Хит",
+    "icon": "paintbrush-2", "iconColor": "#7C3AED", "color": "#F5F3FF",
+    "img": "img/number1/small__4802_10.jpg"
+  },
+  {
+    "id": 54, "category": "ruchki", "name": "Точилка Ultra Axent з контейнером",
+    "desc": "Точилка Axent Ultra с прозрачным контейнером. Чёткая заточка.",
+    "price": 11, "oldPrice": null, "unit": "шт", "inStock": true, "badge": null,
+    "icon": "pencil", "iconColor": "#64748B", "color": "#F8FAFC",
+    "img": "img/number1/small_tochilka_1154.jpg"
+  },
+  {
+    "id": 55, "category": "ofis", "name": "Степлер PATRON 5 функцій 1.8 м",
+    "desc": "Профессиональный степлер PATRON 5-в-1. Дальность скрепления 1.8 м.",
+    "price": 276, "oldPrice": null, "unit": "шт", "inStock": true, "badge": null,
+    "icon": "zap", "iconColor": "#64748B", "color": "#F8FAFC",
+    "img": "img/number1/small_EXT_PN_SP_1052.jpg"
+  },
+  {
+    "id": 56, "category": "ofis", "name": "Степлер PATRON 5 функцій 3.0 м",
+    "desc": "Степлер PATRON 5-в-1 с увеличенной дальностью скрепления 3.0 м.",
+    "price": 311, "oldPrice": null, "unit": "шт", "inStock": true, "badge": null,
+    "icon": "zap", "iconColor": "#475569", "color": "#F8FAFC",
+    "img": "img/number1/small_EXT_PN_SP_1053.jpg"
+  },
+  {
+    "id": 57, "category": "ofis", "name": "Степлер PATRON 5 функцій 5.0 м",
+    "desc": "Профессиональный степлер PATRON 5-в-1 с максимальной дальностью 5.0 м.",
+    "price": 388, "oldPrice": null, "unit": "шт", "inStock": true, "badge": "Топ",
+    "icon": "zap", "iconColor": "#1E293B", "color": "#F1F5F9",
+    "img": "img/number1/small_extpnsp1055.jpg"
+  },
+  {
+    "id": 58, "category": "ofis", "name": "Клей для паперу та картону",
+    "desc": "Универсальный клей для бумаги и картона. Прозрачный, быстро сохнет.",
+    "price": 17, "oldPrice": null, "unit": "шт", "inStock": true, "badge": null,
+    "icon": "droplets", "iconColor": "#0284C7", "color": "#F0F9FF",
+    "img": "img/number1/small__ZB_6100.jpg"
+  },
+  {
+    "id": 59, "category": "ofis", "name": "Пружина спіральна Axent d=6 мм",
+    "desc": "Металлическая пружина для переплёта Axent, диаметр 6 мм.",
+    "price": 139, "oldPrice": null, "unit": "уп", "inStock": true, "badge": null,
+    "icon": "link", "iconColor": "#64748B", "color": "#F8FAFC",
+    "img": "img/number1/small_36781_2906_1.jpg"
+  },
+  {
+    "id": 60, "category": "ofis", "name": "Пружина спіральна Buromax d=6 мм",
+    "desc": "Металлическая пружина для переплёта Buromax, диаметр 6 мм.",
+    "price": 160, "oldPrice": null, "unit": "уп", "inStock": true, "badge": null,
+    "icon": "link", "iconColor": "#475569", "color": "#F8FAFC",
+    "img": "img/number1/small__BM_0502_02.jpg"
+  },
+  {
+    "id": 61, "category": "ofis", "name": "Пружина спіральна TM DA d=6 мм",
+    "desc": "Пластиковая пружина для переплёта TM DA, диаметр 6 мм.",
+    "price": 149, "oldPrice": null, "unit": "уп", "inStock": true, "badge": null,
+    "icon": "link", "iconColor": "#059669", "color": "#F0FDF4",
+    "img": "img/number1/small_pruzhina6plastikovada.jpg"
+  },
+  {
+    "id": 62, "category": "ofis", "name": "Пружина спіральна Axent d=8 мм",
+    "desc": "Металлическая пружина для переплёта Axent, диаметр 8 мм.",
+    "price": 165, "oldPrice": null, "unit": "уп", "inStock": true, "badge": null,
+    "icon": "link", "iconColor": "#64748B", "color": "#F8FAFC",
+    "img": "img/number1/small_36787_290_1.jpg"
+  },
+  {
+    "id": 63, "category": "ofis", "name": "Пружина спіральна Buromax d=8 мм",
+    "desc": "Металлическая пружина для переплёта Buromax, диаметр 8 мм.",
+    "price": 194, "oldPrice": null, "unit": "уп", "inStock": true, "badge": null,
+    "icon": "link", "iconColor": "#475569", "color": "#F8FAFC",
+    "img": "img/number1/small_pruzhina1408.jpg"
+  },
+  {
+    "id": 64, "category": "ofis", "name": "Пружина спіральна TM DA d=8 мм",
+    "desc": "Пластиковая пружина для переплёта TM DA, диаметр 8 мм.",
+    "price": 183, "oldPrice": null, "unit": "уп", "inStock": true, "badge": null,
+    "icon": "link", "iconColor": "#059669", "color": "#F0FDF4",
+    "img": "img/number1/small_pruzhina8plastikovada.jpg"
+  },
+  {
+    "id": 65, "category": "ofis", "name": "Діркопробивач D3510",
+    "desc": "Дырокол D3510 на 20 листов. Металлические лезвия, удобная ручка.",
+    "price": 50, "oldPrice": null, "unit": "шт", "inStock": true, "badge": null,
+    "icon": "circle-dot", "iconColor": "#DC2626", "color": "#FEF2F2",
+    "img": "img/number1/small_dirkoprobyvach_D3510_1.jpg"
+  },
+  {
+    "id": 66, "category": "ofis", "name": "Діркопробивач декоративний JOBMAX",
+    "desc": "Фигурный дырокол JOBMAX Buromax для декоративной перфорации бумаги.",
+    "price": 57, "oldPrice": null, "unit": "шт", "inStock": true, "badge": null,
+    "icon": "circle-dot", "iconColor": "#7C3AED", "color": "#F5F3FF",
+    "img": "img/number1/small__BM_4039_02.jpg"
+  },
+  {
+    "id": 67, "category": "ofis", "name": "Скоба-скріпка Axent жовта, 50 шт",
+    "desc": "Зажимы-скрепки Axent жёлтые. В упаковке 50 штук.",
+    "price": 15, "oldPrice": null, "unit": "уп", "inStock": true, "badge": null,
+    "icon": "paperclip", "iconColor": "#D97706", "color": "#FFFBEB",
+    "img": "img/number1/small__36766_4213_A_1.jpg"
+  },
+  {
+    "id": 68, "category": "ofis", "name": "Скоба-скріпка Buromax біла",
+    "desc": "Металлические зажимы-скрепки Buromax белые. Стандартный размер.",
+    "price": 16, "oldPrice": null, "unit": "уп", "inStock": true, "badge": null,
+    "icon": "paperclip", "iconColor": "#64748B", "color": "#F8FAFC",
+    "img": "img/number1/small_BM_5150_3.jpg"
+  },
+  {
+    "id": 69, "category": "ofis", "name": "Пружина спіральна Axent d=10 мм",
+    "desc": "Металлическая пружина для переплёта Axent, диаметр 10 мм.",
+    "price": 198, "oldPrice": null, "unit": "уп", "inStock": true, "badge": null,
+    "icon": "link", "iconColor": "#64748B", "color": "#F8FAFC",
+    "img": "img/number1/small_36788_29101A_1.jpg"
+  },
+  {
+    "id": 70, "category": "ofis", "name": "Пружина спіральна Buromax d=10 мм",
+    "desc": "Металлическая пружина для переплёта Buromax, диаметр 10 мм.",
+    "price": 236, "oldPrice": null, "unit": "уп", "inStock": true, "badge": null,
+    "icon": "link", "iconColor": "#475569", "color": "#F8FAFC",
+    "img": "img/number1/small__BM_0502_02.jpg"
   }
 ]
