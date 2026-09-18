@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700&family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=1.1">
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
 <body>
@@ -166,18 +166,65 @@
   </div>
 </section>
 
-<!-- БАННЕР АКЦИЯ -->
+<!-- БАННЕР АКЦИЯ (СЛАЙДЕР) -->
 <section style="padding:0 20px 56px;">
   <div class="container">
-    <div class="promo-banner">
-      <div class="promo-banner-icon">
-        <i data-lucide="tag"></i>
+    <div class="promo-slider" id="promo-slider">
+      <div class="slider-wrapper">
+        <!-- Слайд 1: Школьные товары -->
+        <div class="slide active" style="background: linear-gradient(135deg, #1E1B4B 0%, #311042 60%, #4C1D95 100%);">
+          <div class="slide-content">
+            <span class="slide-badge badge-sale">Акция</span>
+            <h2>Скидка до 30% на школьные товары</h2>
+            <p>Акция действует на весь ассортимент тетрадей, ручек и рюкзаков. Только в Киеве.</p>
+            <a href="catalog.html?badge=Скидка" class="btn btn-white">Смотреть акции</a>
+          </div>
+          <div class="slide-visual">
+            <img src="img/school_banner.png" alt="Школьный сезон">
+          </div>
+        </div>
+
+        <!-- Слайд 2: Офисные товары -->
+        <div class="slide" style="background: linear-gradient(135deg, #18181B 0%, #27272A 60%, #3F3F46 100%);">
+          <div class="slide-content">
+            <span class="slide-badge badge-hit">Хит</span>
+            <h2>Офис под ключ с доставкой за 2 часа</h2>
+            <p>Бумага, папки, ручки и офисные принадлежности для вашего бизнеса с быстрой доставкой по Киеву.</p>
+            <a href="catalog.html?cat=ofis" class="btn btn-white">В каталог</a>
+          </div>
+          <div class="slide-visual">
+            <img src="img/office_banner.png" alt="Офис под ключ">
+          </div>
+        </div>
+
+        <!-- Слайд 3: Творчество -->
+        <div class="slide" style="background: linear-gradient(135deg, #064E3B 0%, #065F46 60%, #0F766E 100%);">
+          <div class="slide-content">
+            <span class="slide-badge badge-top">Новинка</span>
+            <h2>Творчество без границ: скидки 15%</h2>
+            <p>Профессиональные краски, кисти, скетчбуки Faber-Castell, Pilot и Koh-i-Noor.</p>
+            <a href="catalog.html?cat=risovanie" class="btn btn-white">Выбрать товары</a>
+          </div>
+          <div class="slide-visual">
+            <img src="img/art_banner.png" alt="Творчество">
+          </div>
+        </div>
       </div>
-      <div class="promo-banner-text">
-        <h2>Скидка до 30% на школьные товары</h2>
-        <p>Акция действует на весь ассортимент тетрадей, ручек и рюкзаков. Только в Киеве.</p>
+
+      <!-- Стрелки -->
+      <button class="slider-arrow prev" aria-label="Назад" onclick="moveSlide(-1)">
+        <i data-lucide="chevron-left"></i>
+      </button>
+      <button class="slider-arrow next" aria-label="Вперед" onclick="moveSlide(1)">
+        <i data-lucide="chevron-right"></i>
+      </button>
+      
+      <!-- Точки -->
+      <div class="slider-dots">
+        <span class="dot active" onclick="setSlide(0)"></span>
+        <span class="dot" onclick="setSlide(1)"></span>
+        <span class="dot" onclick="setSlide(2)"></span>
       </div>
-      <a href="catalog.html?badge=Скидка" class="btn btn-white">Смотреть акции</a>
     </div>
   </div>
 </section>
@@ -350,6 +397,74 @@
     refreshIcons();
   }
   loadHome();
+
+  // Логика слайдера баннеров
+  let currentSlideIdx = 0;
+  let autoplayTimer = null;
+  const slideIntervalMs = 5000;
+
+  function showSlide(index) {
+    const slider = document.getElementById('promo-slider');
+    if (!slider) return;
+    const slides = slider.querySelectorAll('.slide');
+    const dots = slider.querySelectorAll('.dot');
+    
+    if (index >= slides.length) currentSlideIdx = 0;
+    else if (index < 0) currentSlideIdx = slides.length - 1;
+    else currentSlideIdx = index;
+    
+    slides.forEach((slide, i) => {
+      if (i === currentSlideIdx) slide.classList.add('active');
+      else slide.classList.remove('active');
+    });
+    
+    dots.forEach((dot, i) => {
+      if (i === currentSlideIdx) dot.classList.add('active');
+      else dot.classList.remove('active');
+    });
+  }
+
+  function moveSlide(direction) {
+    showSlide(currentSlideIdx + direction);
+    restartAutoplay();
+  }
+
+  function setSlide(index) {
+    showSlide(index);
+    restartAutoplay();
+  }
+
+  function startAutoplay() {
+    stopAutoplay();
+    autoplayTimer = setInterval(() => {
+      showSlide(currentSlideIdx + 1);
+    }, slideIntervalMs);
+  }
+
+  function stopAutoplay() {
+    if (autoplayTimer) {
+      clearInterval(autoplayTimer);
+      autoplayTimer = null;
+    }
+  }
+
+  function restartAutoplay() {
+    startAutoplay();
+  }
+
+  function initSliderEvents() {
+    const slider = document.getElementById('promo-slider');
+    if (!slider) return;
+    slider.addEventListener('mouseenter', stopAutoplay);
+    slider.addEventListener('mouseleave', startAutoplay);
+    startAutoplay();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSliderEvents);
+  } else {
+    initSliderEvents();
+  }
 </script>
 </body>
 </html>

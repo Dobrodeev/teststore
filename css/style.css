@@ -577,26 +577,143 @@ header {
 .breadcrumb a:hover { color: var(--accent-hover); }
 .breadcrumb svg { width: 12px; height: 12px; stroke: var(--gray); }
 
-/* ===== PROMO BANNER ===== */
-.promo-banner {
-  background: linear-gradient(135deg, #171717 0%, #262626 60%, #1c1c1c 100%);
-  border-radius: 18px; padding: 44px 52px;
+/* ===== PROMO SLIDER ===== */
+.promo-slider {
+  position: relative;
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  height: 340px;
+  box-shadow: var(--shadow-sm);
+}
+.slider-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 44px 52px;
   color: var(--white);
-  display: flex; justify-content: space-between; align-items: center; gap: 24px;
+  pointer-events: none;
+  gap: 32px;
 }
-.promo-banner-icon {
-  width: 72px; height: 72px; border-radius: 18px;
-  background: rgba(245,158,11,.15);
-  border: 1px solid rgba(245,158,11,.3);
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
+.slide.active {
+  opacity: 1;
+  pointer-events: all;
 }
-.promo-banner-icon svg { width: 36px; height: 36px; stroke: var(--accent); }
-.promo-banner-text h2 {
+.slide-content {
+  flex: 1;
+  max-width: 50%;
+}
+.slide-badge {
+  display: inline-block;
   font-family: 'Rubik', sans-serif;
-  font-size: 26px; font-weight: 800; margin-bottom: 8px;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-bottom: 12px;
 }
-.promo-banner-text p { font-size: 15px; color: #A8A29E; }
+.slide-content h2 {
+  font-family: 'Rubik', sans-serif;
+  font-size: clamp(20px, 3.5vw, 28px);
+  font-weight: 800;
+  margin-bottom: 10px;
+  line-height: 1.2;
+  color: var(--white);
+}
+.slide-content p {
+  font-size: 15px;
+  color: #A8A29E;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+.slide-visual {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.slide-visual img {
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+  transform: scale(1);
+  transition: transform 0.8s ease-out;
+}
+.slide.active .slide-visual img {
+  transform: scale(1.05);
+}
+
+/* Slider Navigation Arrows */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--white);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  opacity: 0;
+  z-index: 10;
+}
+.promo-slider:hover .slider-arrow {
+  opacity: 1;
+}
+.slider-arrow:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--primary);
+}
+.slider-arrow.prev { left: 16px; }
+.slider-arrow.next { right: 16px; }
+.slider-arrow svg { width: 20px; height: 20px; stroke: currentColor; }
+
+/* Slider Pagination Dots */
+.slider-dots {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+.slider-dots .dot {
+  width: 24px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.slider-dots .dot:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+.slider-dots .dot.active {
+  background: var(--accent);
+  width: 32px;
+}
 
 /* ===== ADVANTAGES ===== */
 .advantages-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
@@ -735,7 +852,13 @@ footer ul a:hover { color: var(--accent); }
   .contacts-grid { grid-template-columns: 1fr; }
   .catalog-layout { grid-template-columns: 1fr; }
   .filters-panel { position: static; }
-  .promo-banner { flex-direction: column; text-align: center; padding: 32px 24px; }
+  .promo-slider { height: auto; min-height: 280px; }
+  .slide { flex-direction: column; text-align: center; padding: 36px 24px; gap: 16px; }
+  .slide-content { max-width: 100%; }
+  .slide-content p { margin-bottom: 16px; }
+  .slide-visual { display: none; }
+  .slider-arrow { display: none; }
+  .slider-dots { bottom: 12px; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
   .burger { display: flex; }
   .cart-panel { width: 100%; }

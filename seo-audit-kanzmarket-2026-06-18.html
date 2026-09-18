@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO/GEO/AEO Audit — КанцМаркет — 18.06.2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',sans-serif;font-size:14px;color:#1E293B;background:#F8FAFC;line-height:1.6}
+  .cover{background:#1B2A4A;color:#fff;padding:80px 60px;page-break-after:always}
+  .cover h1{font-size:42px;font-weight:800;margin-bottom:8px}
+  .cover .sub{color:#93C5FD;font-size:18px;margin-bottom:4px}
+  .cover .type{font-size:12px;color:#fff;margin-bottom:40px;letter-spacing:1px;text-transform:uppercase}
+  .score-row{display:flex;gap:16px;margin-bottom:48px}
+  .score-cell{flex:1;padding:20px;border-radius:12px;text-align:center}
+  .score-cell .dim{font-size:11px;font-weight:700;text-transform:uppercase;color:#fff;margin-bottom:4px}
+  .score-cell .num{font-size:48px;font-weight:800;color:#fff;line-height:1}
+  .score-cell .sta{font-size:11px;font-style:italic;color:rgba(255,255,255,.8);margin-top:4px}
+  .green{background:#16A34A}.amber{background:#D97706}.red{background:#DC2626}
+  .cover .meta{color:#94A3B8;font-size:12px;margin-top:40px}
+  .page{max-width:900px;margin:0 auto;padding:40px 40px}
+  h1.sec{font-size:22px;font-weight:800;color:#1B2A4A;border-bottom:3px solid #2563EB;padding-bottom:8px;margin:36px 0 20px}
+  h2.sec{font-size:16px;font-weight:700;color:#1B2A4A;margin:28px 0 12px}
+  .exec-box{background:#EFF6FF;border-left:4px solid #2563EB;padding:20px 24px;border-radius:0 8px 8px 0;margin-bottom:24px;font-size:14px;line-height:1.7}
+  table{width:100%;border-collapse:collapse;margin-bottom:24px;font-size:13px}
+  th{background:#1B2A4A;color:#fff;padding:10px 12px;text-align:left;font-weight:600}
+  td{padding:9px 12px;border-bottom:1px solid #E2E8F0}
+  tr:nth-child(even) td{background:#F8F9FA}
+  .good{background:#16A34A!important;color:#fff;font-weight:600;border-radius:4px;padding:2px 8px;display:inline-block;font-size:12px}
+  .warn{background:#D97706!important;color:#fff;font-weight:600;border-radius:4px;padding:2px 8px;display:inline-block;font-size:12px}
+  .bad{background:#DC2626!important;color:#fff;font-weight:600;border-radius:4px;padding:2px 8px;display:inline-block;font-size:12px}
+  .pri-crit{background:#DC2626;color:#fff;padding:2px 10px;border-radius:4px;font-size:11px;font-weight:700}
+  .pri-high{background:#EA580C;color:#fff;padding:2px 10px;border-radius:4px;font-size:11px;font-weight:700}
+  .pri-med{background:#D97706;color:#fff;padding:2px 10px;border-radius:4px;font-size:11px;font-weight:700}
+  .pri-win{background:#16A34A;color:#fff;padding:2px 10px;border-radius:4px;font-size:11px;font-weight:700}
+  .win-box{background:#F0FDF4;border:1px solid #BBF7D0;border-radius:8px;padding:20px 24px;margin-bottom:24px}
+  .win-item{margin-bottom:10px;padding-left:20px;position:relative}
+  .win-item::before{content:"✓";position:absolute;left:0;color:#16A34A;font-weight:700}
+  footer.rep{background:#1B2A4A;color:#94A3B8;text-align:center;padding:20px;font-size:12px;margin-top:40px}
+  @media print{.cover{page-break-after:always}.page{page-break-inside:avoid}}
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="sub">SEO / GEO / AEO Audit Report</div>
+  <h1>kanzmarket.kiev.ua</h1>
+  <div class="type">Quick Audit</div>
+  <div class="score-row">
+    <div class="score-cell amber">
+      <div class="dim">SEO</div>
+      <div class="num">6</div>
+      <div class="sta">On Track</div>
+    </div>
+    <div class="score-cell red">
+      <div class="dim">GEO</div>
+      <div class="num">4</div>
+      <div class="sta">Needs Work</div>
+    </div>
+    <div class="score-cell red">
+      <div class="dim">AEO</div>
+      <div class="num">3</div>
+      <div class="sta">Needs Work</div>
+    </div>
+  </div>
+  <div class="meta">Дата аудита: 18 июня 2026 г. &nbsp;·&nbsp; Claude Skill by Alex Labat</div>
+</div>
+
+<div class="page">
+
+<!-- EXECUTIVE SUMMARY -->
+<h1 class="sec">Исполнительное резюме</h1>
+<div class="exec-box">
+  КанцМаркет имеет добротный технический SEO-фундамент: Store schema с полными NAP-данными, canonical теги, robots.txt и sitemap на месте. Однако сайт теряет критически важный органический трафик из-за двух системных проблем: весь контент каталога рендерится через JavaScript (поисковики могут не увидеть 70 товаров), и полностью отсутствуют сигналы для AI-поисковиков и голосовых ответов (нет FAQ, нет социальных профилей, нет авторов). Главная возможность роста — добавить статичный HTML-каталог или SSR, FAQ-страницу с schema и социальные ссылки.
+</div>
+
+<table>
+  <thead><tr><th>Направление</th><th>Балл</th><th>Статус</th><th>Ключевой вывод</th></tr></thead>
+  <tbody>
+    <tr><td>SEO</td><td style="background:#D97706;color:#fff;font-weight:700">6/10</td><td><span class="warn">On Track</span></td><td>Хорошая база, критическая проблема с JS-рендерингом</td></tr>
+    <tr><td>GEO</td><td style="background:#DC2626;color:#fff;font-weight:700">4/10</td><td><span class="bad">Needs Work</span></td><td>Нет соцпрофилей, авторов, отзывов — AI не может идентифицировать бренд</td></tr>
+    <tr><td>AEO</td><td style="background:#DC2626;color:#fff;font-weight:700">3/10</td><td><span class="bad">Needs Work</span></td><td>Нет FAQ, нет вопросных заголовков, нет schema для голосовых ответов</td></tr>
+    <tr><td><strong>Итого</strong></td><td><strong>13/30</strong></td><td></td><td></td></tr>
+  </tbody>
+</table>
+
+<!-- PAGES AUDITED -->
+<h1 class="sec">Проверенные страницы</h1>
+<table>
+  <thead><tr><th>URL</th><th>Тип</th><th>Примечание</th></tr></thead>
+  <tbody>
+    <tr><td>index.html</td><td>Главная</td><td>Store schema, canonical ✅ | og:image отсутствует ❌</td></tr>
+    <tr><td>catalog.html</td><td>Каталог</td><td>Canonical ✅ | Весь контент JS-рендеринг ❌</td></tr>
+    <tr><td>o-nas.html</td><td>О нас</td><td>Хороший контент | Нет canonical, нет schema ❌</td></tr>
+    <tr><td>kontakty.html</td><td>Контакты</td><td>Полные NAP-данные ✅ | Нет LocalBusiness schema, нет canonical ❌</td></tr>
+    <tr><td>robots.txt</td><td>Технический</td><td>Блокирует /data/ ✅ | Sitemap URL указывает на прод ✅</td></tr>
+    <tr><td>sitemap.xml</td><td>Технический</td><td>Присутствует, но только 4 URL — категории отсутствуют ⚠️</td></tr>
+  </tbody>
+</table>
+
+<!-- SEO ANALYSIS -->
+<h1 class="sec">SEO Анализ &nbsp;<span style="font-size:16px;color:#D97706">6/10</span></h1>
+
+<h2 class="sec">Технические On-Page сигналы</h2>
+<table>
+  <thead><tr><th>Сигнал</th><th>Находка</th><th>Статус</th></tr></thead>
+  <tbody>
+    <tr><td>Title tag</td><td>«КанцМаркет Киев — Канцтовары с доставкой по Киеву» (52 символа)</td><td><span class="good">Good</span></td></tr>
+    <tr><td>Meta description</td><td>129 символов (оптимально 150–160), CTA отсутствует</td><td><span class="warn">Нужно улучшить</span></td></tr>
+    <tr><td>H1 (главная)</td><td>«Всё для офиса, школы и творчества» — нет ключевого слова «канцтовары»</td><td><span class="warn">Нужно улучшить</span></td></tr>
+    <tr><td>Canonical</td><td>Присутствует на главной и каталоге, отсутствует на o-nas и kontakty</td><td><span class="warn">Частично</span></td></tr>
+    <tr><td>og:title / og:description</td><td>Присутствуют на главной</td><td><span class="good">Good</span></td></tr>
+    <tr><td>og:image</td><td>Отсутствует на всех страницах</td><td><span class="bad">Отсутствует</span></td></tr>
+    <tr><td>og:url</td><td>Отсутствует</td><td><span class="bad">Отсутствует</span></td></tr>
+    <tr><td>Twitter Card</td><td>Полностью отсутствует</td><td><span class="bad">Отсутствует</span></td></tr>
+    <tr><td>Viewport meta</td><td>Присутствует</td><td><span class="good">Good</span></td></tr>
+    <tr><td>robots.txt</td><td>Корректен, блокирует /data/</td><td><span class="good">Good</span></td></tr>
+    <tr><td>sitemap.xml</td><td>4 URL — нет страниц категорий (?cat=ruchki и др.)</td><td><span class="warn">Неполный</span></td></tr>
+    <tr><td>Breadcrumb schema</td><td>Визуальные хлебные крошки есть, BreadcrumbList schema отсутствует</td><td><span class="bad">Отсутствует</span></td></tr>
+  </tbody>
+</table>
+
+<h2 class="sec">Качество контента</h2>
+<table>
+  <thead><tr><th>Сигнал</th><th>Находка</th><th>Статус</th></tr></thead>
+  <tbody>
+    <tr><td>JS-рендеринг каталога</td><td>Все 70 товаров загружаются через fetch() — не видны в HTML-источнике</td><td><span class="bad">Критично</span></td></tr>
+    <tr><td>Контент главной</td><td>Hero, категории, хиты, преимущества — структура хорошая</td><td><span class="good">Good</span></td></tr>
+    <tr><td>Страница «О нас»</td><td>Содержательный текст: 2015 г., 500+ товаров, 3000+ клиентов</td><td><span class="good">Good</span></td></tr>
+    <tr><td>Страница контактов</td><td>Полные NAP: адрес, телефон, email, часы работы</td><td><span class="good">Good</span></td></tr>
+    <tr><td>Дата публикации/обновления</td><td>Нигде не указана</td><td><span class="warn">Нужно добавить</span></td></tr>
+    <tr><td>Alt-тексты изображений</td><td>Нет реальных IMG-тегов в статичном HTML (товары через JS)</td><td><span class="warn">Нужно улучшить</span></td></tr>
+  </tbody>
+</table>
+
+<h2 class="sec">Структурированные данные</h2>
+<table>
+  <thead><tr><th>Сигнал</th><th>Находка</th><th>Статус</th></tr></thead>
+  <tbody>
+    <tr><td>Store schema (главная)</td><td>@type:Store с name, telephone, address, openingHours, priceRange</td><td><span class="good">Good</span></td></tr>
+    <tr><td>Product schema</td><td>Отсутствует — ни один товар не размечен</td><td><span class="bad">Отсутствует</span></td></tr>
+    <tr><td>BreadcrumbList schema</td><td>Отсутствует (есть визуальные крошки на o-nas и kontakty)</td><td><span class="bad">Отсутствует</span></td></tr>
+    <tr><td>LocalBusiness schema</td><td>Отсутствует на kontakty.html</td><td><span class="bad">Отсутствует</span></td></tr>
+    <tr><td>FAQ schema</td><td>Отсутствует полностью</td><td><span class="bad">Отсутствует</span></td></tr>
+  </tbody>
+</table>
+
+<!-- GEO ANALYSIS -->
+<h1 class="sec">GEO Анализ &nbsp;<span style="font-size:16px;color:#DC2626">4/10</span></h1>
+<p style="margin-bottom:16px;color:#64748B;font-size:13px;"><em>GEO — оптимизация для AI-поисковиков: Perplexity, ChatGPT Search, Google AI Overviews. Они синтезируют ответы из проверенных, авторитетных источников.</em></p>
+
+<h2 class="sec">E-E-A-T (Экспертность, Авторитетность, Доверие)</h2>
+<table>
+  <thead><tr><th>Сигнал</th><th>Находка</th><th>Статус</th></tr></thead>
+  <tbody>
+    <tr><td>Авторы / команда</td><td>Ни один сотрудник не назван по имени</td><td><span class="bad">Отсутствует</span></td></tr>
+    <tr><td>О нас страница</td><td>Присутствует, содержит историю компании с 2015 г.</td><td><span class="good">Good</span></td></tr>
+    <tr><td>Контактные данные</td><td>Телефон, email, адрес, часы — полный NAP</td><td><span class="good">Good</span></td></tr>
+    <tr><td>Отзывы / рейтинги</td><td>Полностью отсутствуют</td><td><span class="bad">Отсутствует</span></td></tr>
+    <tr><td>Награды / сертификаты</td><td>Не упомянуты</td><td><span class="bad">Отсутствует</span></td></tr>
+    <tr><td>Упоминания в прессе</td><td>Не представлены</td><td><span class="bad">Отсутствует</span></td></tr>
+  </tbody>
+</table>
+
+<h2 class="sec">Технические GEO сигналы</h2>
+<table>
+  <thead><tr><th>Сигнал</th><th>Находка</th><th>Статус</th></tr></thead>
+  <tbody>
+    <tr><td>Ссылки на соцсети</td><td>Нигде на сайте нет ссылок на Facebook, Instagram, Telegram</td><td><span class="bad">Отсутствует</span></td></tr>
+    <tr><td>sameAs в schema</td><td>Store schema не содержит sameAs (Google My Business, соцсети)</td><td><span class="bad">Отсутствует</span></td></tr>
+    <tr><td>HTTPS</td><td>Работает локально; canonical указывает на https://</td><td><span class="good">Good</span></td></tr>
+    <tr><td>robots.txt для AI-краулеров</td><td>Allow: * — AI-краулеры не блокируются</td><td><span class="good">Good</span></td></tr>
+    <tr><td>Оригинальные данные/статистика</td><td>«500+ товаров», «3000+ клиентов», «9 лет» — есть конкретные цифры</td><td><span class="warn">Есть базовое</span></td></tr>
+  </tbody>
+</table>
+
+<!-- AEO ANALYSIS -->
+<h1 class="sec">AEO Анализ &nbsp;<span style="font-size:16px;color:#DC2626">3/10</span></h1>
+<p style="margin-bottom:16px;color:#64748B;font-size:13px;"><em>AEO — оптимизация для Featured Snippets, People Also Ask и голосового поиска. Требует вопросных заголовков и FAQ-структуры.</em></p>
+
+<h2 class="sec">Featured Snippet и структурированные ответы</h2>
+<table>
+  <thead><tr><th>Сигнал</th><th>Находка</th><th>Статус</th></tr></thead>
+  <tbody>
+    <tr><td>FAQ-страница</td><td>Полностью отсутствует</td><td><span class="bad">Отсутствует</span></td></tr>
+    <tr><td>FAQ schema (JSON-LD)</td><td>Полностью отсутствует</td><td><span class="bad">Отсутствует</span></td></tr>
+    <tr><td>Вопросные заголовки H2/H3</td><td>Ни одного — все H2 утвердительные («Хиты продаж», «Категории»)</td><td><span class="bad">Отсутствует</span></td></tr>
+    <tr><td>Прямые ответы-абзацы</td><td>Нет блоков типа «Доставка — это... [40–60 слов]»</td><td><span class="bad">Отсутствует</span></td></tr>
+    <tr><td>BreadcrumbList schema</td><td>Отсутствует</td><td><span class="bad">Отсутствует</span></td></tr>
+    <tr><td>HowTo schema</td><td>Отсутствует</td><td><span class="bad">Отсутствует</span></td></tr>
+    <tr><td>Speakable schema</td><td>Отсутствует</td><td><span class="bad">Отсутствует</span></td></tr>
+    <tr><td>Локальные сигналы для голоса</td><td>Адрес и телефон в footer и kontakty — базовый уровень</td><td><span class="warn">Базовый</span></td></tr>
+  </tbody>
+</table>
+
+<!-- PRIORITY RECOMMENDATIONS -->
+<h1 class="sec">Матрица приоритетов</h1>
+<table>
+  <thead><tr><th>Приоритет</th><th>Проблема</th><th>Направление</th><th>Усилие</th><th>Влияние</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><span class="pri-crit">🔴 Критично</span></td>
+      <td>Контент каталога рендерится через JS — поисковики не видят 70 товаров</td>
+      <td>SEO</td><td>Высокое</td><td>Очень высокое</td>
+    </tr>
+    <tr>
+      <td><span class="pri-crit">🔴 Критично</span></td>
+      <td>og:image отсутствует — шаринг в соцсетях без картинки</td>
+      <td>SEO / GEO</td><td>Низкое</td><td>Высокое</td>
+    </tr>
+    <tr>
+      <td><span class="pri-high">🟠 Высокий</span></td>
+      <td>Нет FAQ-страницы и FAQ-схемы — упущены все featured snippets по доставке, оплате, ассортименту</td>
+      <td>AEO</td><td>Среднее</td><td>Высокое</td>
+    </tr>
+    <tr>
+      <td><span class="pri-high">🟠 Высокий</span></td>
+      <td>Нет ссылок на соцсети и sameAs в schema — AI-поисковики не могут связать бренд с сущностью</td>
+      <td>GEO</td><td>Низкое</td><td>Высокое</td>
+    </tr>
+    <tr>
+      <td><span class="pri-med">🟡 Средний</span></td>
+      <td>Canonical и schema отсутствуют на o-nas.html и kontakty.html</td>
+      <td>SEO</td><td>Низкое</td><td>Среднее</td>
+    </tr>
+    <tr>
+      <td><span class="pri-med">🟡 Средний</span></td>
+      <td>H1 главной страницы не содержит ключевое слово «канцтовары Киев»</td>
+      <td>SEO</td><td>Минимальное</td><td>Среднее</td>
+    </tr>
+    <tr>
+      <td><span class="pri-med">🟡 Средний</span></td>
+      <td>Product schema отсутствует — товары не показываются в Google Shopping</td>
+      <td>SEO</td><td>Высокое</td><td>Высокое</td>
+    </tr>
+    <tr>
+      <td><span class="pri-med">🟡 Средний</span></td>
+      <td>Нет отзывов покупателей — критично для E-E-A-T и AI-доверия</td>
+      <td>GEO</td><td>Среднее</td><td>Высокое</td>
+    </tr>
+    <tr>
+      <td><span class="pri-win">🟢 Быстрый wins</span></td>
+      <td>Добавить og:url, og:image (логотип) и Twitter Card — 10 минут правки</td>
+      <td>SEO</td><td>Минимальное</td><td>Среднее</td>
+    </tr>
+    <tr>
+      <td><span class="pri-win">🟢 Быстрый wins</span></td>
+      <td>Добавить BreadcrumbList schema на o-nas и kontakty (крошки уже есть визуально)</td>
+      <td>SEO / AEO</td><td>Минимальное</td><td>Среднее</td>
+    </tr>
+    <tr>
+      <td><span class="pri-win">🟢 Быстрый wins</span></td>
+      <td>Исправить H1: «Канцтовары в Киеве — магазин КанцМаркет»</td>
+      <td>SEO</td><td>Минимальное</td><td>Среднее</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- WHAT'S WORKING -->
+<h1 class="sec">Что работает хорошо</h1>
+<div class="win-box">
+  <div class="win-item">Store schema с полным NAP (название, адрес, телефон, часы, priceRange) на главной странице — отличный сигнал для локального поиска.</div>
+  <div class="win-item">Canonical теги присутствуют на главной и каталоге — дублирования нет.</div>
+  <div class="win-item">robots.txt корректно блокирует /data/ (JSON-файлы товаров) от индексации — хорошая практика.</div>
+  <div class="win-item">Страница «О нас» содержит конкретные факты: год основания 2015, 500+ товаров, 3000+ клиентов — это цифры, которые AI-поисковики любят цитировать.</div>
+  <div class="win-item">Мобильный viewport присутствует на всех страницах — базовая mobile-friendly оптимизация есть.</div>
+  <div class="win-item">Хлебные крошки (breadcrumbs) присутствуют визуально на o-nas и kontakty — осталось добавить schema.</div>
+  <div class="win-item">Структура заголовков логична: один H1 на страницу, H2 для разделов.</div>
+</div>
+
+<!-- QUICK FIXES -->
+<h1 class="sec">Быстрые исправления (до 30 минут)</h1>
+<div style="background:#FFF7ED;border:1px solid #FED7AA;border-radius:8px;padding:20px 24px;margin-bottom:24px;">
+  <p style="font-weight:700;margin-bottom:12px;color:#C2410C;">1. Добавить og:image и og:url в &lt;head&gt; всех страниц:</p>
+  <pre style="background:#1E293B;color:#E2E8F0;padding:14px;border-radius:6px;font-size:12px;overflow-x:auto;">&lt;meta property="og:image" content="https://kanzmarket.kiev.ua/img/og-cover.jpg"&gt;
+&lt;meta property="og:url" content="https://kanzmarket.kiev.ua/"&gt;
+&lt;meta name="twitter:card" content="summary_large_image"&gt;
+&lt;meta name="twitter:title" content="КанцМаркет — Канцтовары в Киеве"&gt;
+&lt;meta name="twitter:image" content="https://kanzmarket.kiev.ua/img/og-cover.jpg"&gt;</pre>
+
+  <p style="font-weight:700;margin:16px 0 8px;color:#C2410C;">2. Исправить H1 на главной:</p>
+  <pre style="background:#1E293B;color:#E2E8F0;padding:14px;border-radius:6px;font-size:12px;">&lt;h1&gt;Канцтовары в Киеве — офис, школа, творчество&lt;/h1&gt;</pre>
+
+  <p style="font-weight:700;margin:16px 0 8px;color:#C2410C;">3. Добавить sameAs в Store schema (index.html):</p>
+  <pre style="background:#1E293B;color:#E2E8F0;padding:14px;border-radius:6px;font-size:12px;overflow-x:auto;">"sameAs": [
+  "https://www.facebook.com/kanzmarket",
+  "https://www.instagram.com/kanzmarket",
+  "https://maps.google.com/?cid=YOUR_GMB_ID"
+]</pre>
+
+  <p style="font-weight:700;margin:16px 0 8px;color:#C2410C;">4. Добавить BreadcrumbList schema на o-nas.html:</p>
+  <pre style="background:#1E293B;color:#E2E8F0;padding:14px;border-radius:6px;font-size:12px;overflow-x:auto;">&lt;script type="application/ld+json"&gt;
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Главная","item":"https://kanzmarket.kiev.ua/"},
+  {"@type":"ListItem","position":2,"name":"О нас","item":"https://kanzmarket.kiev.ua/o-nas.html"}
+]}&lt;/script&gt;</pre>
+</div>
+
+</div>
+
+<footer class="rep">
+  Аудит: КанцМаркет (kanzmarket.kiev.ua) · 18 июня 2026 г. · Quick Audit · Claude Skill by Alex Labat
+</footer>
+</body>
+</html>
