@@ -1,0 +1,12 @@
+# Секретные ключи
+serviceAccountKey.json
+
+# Зависимости
+node_modules/
+
+# Firebase
+.firebase/
+
+# Системные файлы
+.DS_Store
+Thumbs.db
