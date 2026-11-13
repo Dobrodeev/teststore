@@ -118,13 +118,18 @@
           </div>
         </div>
 
-        <!-- Карта-заглушка -->
-        <div style="margin-top:20px; background:var(--gray-light); border-radius:var(--radius); height:160px; display:flex; align-items:center; justify-content:center; text-align:center; border:1px solid var(--border);">
-          <div>
-            <div class="adv-icon-wrap" style="margin:0 auto 10px;"><i data-lucide="map"></i></div>
-            <p style="font-size:13px; color:var(--gray);">Киев, ул. Крещатик, 15</p>
-          </div>
+        <!-- Карта -->
+        <div style="margin-top:20px; border-radius:var(--radius); overflow:hidden; border:1px solid var(--border); background:var(--gray-light);">
+          <iframe
+            src="https://www.google.com/maps?q=50.4760874,30.6180725&amp;z=17&amp;hl=ru&amp;output=embed"
+            title="КанцМаркет на карте Google"
+            width="100%" height="260" style="border:0; display:block;"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
         </div>
+        <a class="btn btn-outline btn-full" style="margin-top:12px;" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/place/%D0%90%D0%BB%D1%8C%D0%BA%D0%BE%D1%80/@50.4760994,30.6183189,17.79z/data=!4m6!3m5!1s0x40d4cd1ed6866d29:0xa0b88d717c06657a!8m2!3d50.4760874!4d30.6180725!16s%2Fg%2F1vnngy17">
+          <i data-lucide="map-pin"></i> Открыть в Google Картах
+        </a>
       </div>
 
       <!-- Форма заказа -->
