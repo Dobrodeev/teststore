@@ -1,12 +1,42 @@
-# Секретные ключи
+# Секреты: ключи сервисных аккаунтов и переменные окружения
 serviceAccountKey.json
+*serviceAccount*.json
+*-firebase-adminsdk-*.json
+.env
+.env.*
+!.env.example
 
 # Зависимости
 node_modules/
 
-# Firebase
-.firebase/
+# Локальный кластер PostgreSQL
+.pgdata/
 
-# Системные файлы
+# Статический экспорт для Firebase Hosting
+firebase-dist/
+
+# Python (upload.py / download.py)
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Firebase: кэш деплоя и логи CLI
+.firebase/
+firebase-debug.log
+firebase-debug.*.log
+ui-debug.log
+
+# Логи
+*.log
+npm-debug.log*
+
+# Редакторы и ОС
+.vscode/
+.idea/
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# Локальные настройки Claude Code
+.claude/

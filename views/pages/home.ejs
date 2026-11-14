@@ -1,0 +1,242 @@
+<%- include('../partials/head') %>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="hero-tag">
+        <i data-lucide="map-pin"></i>
+        Магазин в Киеве + Доставка
+      </span>
+      <h1>Канцтовары в Киеве —<br>офис, школа и <span>творчество</span></h1>
+      <p class="hero-sub">Более 500 наименований канцтоваров. Ручки, тетради, маркеры, папки, товары для рисования. Быстрая доставка по Киеву — от 2 часов.</p>
+      <div class="hero-actions">
+        <a href="/catalog" class="btn btn-primary">Перейти в каталог</a>
+        <a href="/kontakty" class="btn btn-outline">
+          <i data-lucide="phone"></i> Написать нам
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-val">500+</div>
+          <div class="stat-lbl">Товаров</div>
+        </div>
+        <div>
+          <div class="stat-val">2 ч</div>
+          <div class="stat-lbl">Доставка по Киеву</div>
+        </div>
+        <div>
+          <div class="stat-val">3 000+</div>
+          <div class="stat-lbl">Клиентов</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hero-card-icon" style="background:rgba(245,158,11,.2); color:#F59E0B;">
+          <i data-lucide="pencil"></i>
+        </div>
+        <h3>Ручки и карандаши</h3>
+        <p>BIC, Pilot, Faber-Castell, Lamy</p>
+        <div class="hero-card-price">от 12 грн</div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-icon" style="background:rgba(52,211,153,.2); color:#34D399;">
+          <i data-lucide="book-open"></i>
+        </div>
+        <h3>Тетради</h3>
+        <p>48, 96 л. — А4, А5</p>
+        <div class="hero-card-price">от 65 грн</div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-icon" style="background:rgba(167,139,250,.2); color:#A78BFA;">
+          <i data-lucide="palette"></i>
+        </div>
+        <h3>Рисование</h3>
+        <p>Краски, кисти, пастель</p>
+        <div class="hero-card-price">от 95 грн</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- КАТЕГОРИИ -->
+<section class="section section-white">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">Категории товаров</h2>
+        <p class="section-sub">Найдите всё необходимое для работы, учёбы и творчества</p>
+      </div>
+    </div>
+    <div class="categories-grid" id="categories-grid">
+<% categories.forEach((c) => { -%>
+      <a href="/catalog?cat=<%= c.id %>" class="cat-card">
+        <div class="cat-svg-wrap"><i data-lucide="<%= c.lucideIcon %>"></i></div>
+        <div class="cat-name"><%= c.name %></div>
+        <div class="cat-desc"><%= c.desc %></div>
+      </a>
+<% }) -%>
+    </div>
+  </div>
+</section>
+
+<!-- ХИТЫ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">Хиты продаж</h2>
+        <p class="section-sub">Самые популярные товары среди покупателей</p>
+      </div>
+      <a href="/catalog" class="btn btn-outline btn-sm">Весь каталог →</a>
+    </div>
+    <div class="products-grid" id="hits-grid">
+<% hits.forEach((p) => { -%>
+<%- include('../partials/product-card', { p }) %>
+<% }) -%>
+    </div>
+  </div>
+</section>
+
+<!-- БАННЕР АКЦИЯ (СЛАЙДЕР) -->
+<section style="padding:0 20px 56px;">
+  <div class="container">
+    <div class="promo-slider" id="promo-slider">
+      <div class="slider-wrapper">
+        <!-- Слайд 1: Школьные товары -->
+        <div class="slide active" style="background: linear-gradient(135deg, #1E1B4B 0%, #311042 60%, #4C1D95 100%);">
+          <div class="slide-content">
+            <span class="slide-badge badge-sale">Акция</span>
+            <h2>Скидка до 30% на школьные товары</h2>
+            <p>Акция действует на весь ассортимент тетрадей, ручек и рюкзаков. Только в Киеве.</p>
+            <a href="/catalog?badge=Скидка" class="btn btn-white">Смотреть акции</a>
+          </div>
+          <div class="slide-visual">
+            <img src="/img/school_banner.png" alt="Школьный сезон">
+          </div>
+        </div>
+
+        <!-- Слайд 2: Офисные товары -->
+        <div class="slide" style="background: linear-gradient(135deg, #18181B 0%, #27272A 60%, #3F3F46 100%);">
+          <div class="slide-content">
+            <span class="slide-badge badge-hit">Хит</span>
+            <h2>Офис под ключ с доставкой за 2 часа</h2>
+            <p>Бумага, папки, ручки и офисные принадлежности для вашего бизнеса с быстрой доставкой по Киеву.</p>
+            <a href="/catalog?cat=ofis" class="btn btn-white">В каталог</a>
+          </div>
+          <div class="slide-visual">
+            <img src="/img/office_banner.png" alt="Офис под ключ">
+          </div>
+        </div>
+
+        <!-- Слайд 3: Творчество -->
+        <div class="slide" style="background: linear-gradient(135deg, #064E3B 0%, #065F46 60%, #0F766E 100%);">
+          <div class="slide-content">
+            <span class="slide-badge badge-top">Новинка</span>
+            <h2>Творчество без границ: скидки 15%</h2>
+            <p>Профессиональные краски, кисти, скетчбуки Faber-Castell, Pilot и Koh-i-Noor.</p>
+            <a href="/catalog?cat=risovanie" class="btn btn-white">Выбрать товары</a>
+          </div>
+          <div class="slide-visual">
+            <img src="/img/art_banner.png" alt="Творчество">
+          </div>
+        </div>
+      </div>
+
+      <!-- Стрелки -->
+      <button class="slider-arrow prev" aria-label="Назад" onclick="moveSlide(-1)">
+        <i data-lucide="chevron-left"></i>
+      </button>
+      <button class="slider-arrow next" aria-label="Вперед" onclick="moveSlide(1)">
+        <i data-lucide="chevron-right"></i>
+      </button>
+      
+      <!-- Точки -->
+      <div class="slider-dots">
+        <span class="dot active" onclick="setSlide(0)"></span>
+        <span class="dot" onclick="setSlide(1)"></span>
+        <span class="dot" onclick="setSlide(2)"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ТОП-ТОВАРЫ -->
+<section class="section section-white">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">Топ-товары</h2>
+        <p class="section-sub">Товары с лучшими отзывами наших покупателей</p>
+      </div>
+      <a href="/catalog" class="btn btn-outline btn-sm">Все товары →</a>
+    </div>
+    <div class="products-grid" id="top-grid">
+<% top.forEach((p) => { -%>
+<%- include('../partials/product-card', { p }) %>
+<% }) -%>
+    </div>
+  </div>
+</section>
+
+<!-- ПРЕИМУЩЕСТВА -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title" style="text-align:center; margin-bottom:32px;">Почему покупают у нас</h2>
+    <div class="advantages-grid">
+      <div class="adv-card">
+        <div class="adv-icon-wrap"><i data-lucide="truck"></i></div>
+        <div class="adv-title">Доставка за 2 часа</div>
+        <div class="adv-desc">Быстрая доставка по Киеву от 2 часов. Новая Почта — по Украине.</div>
+      </div>
+      <div class="adv-card">
+        <div class="adv-icon-wrap"><i data-lucide="shield-check"></i></div>
+        <div class="adv-title">Гарантия качества</div>
+        <div class="adv-desc">Только оригинальные товары от проверенных брендов: BIC, Pilot, Faber-Castell.</div>
+      </div>
+      <div class="adv-card">
+        <div class="adv-icon-wrap"><i data-lucide="credit-card"></i></div>
+        <div class="adv-title">Удобная оплата</div>
+        <div class="adv-desc">Наличными, картой, Приватбанк, MonoBank, оплата при получении.</div>
+      </div>
+      <div class="adv-card">
+        <div class="adv-icon-wrap"><i data-lucide="headphones"></i></div>
+        <div class="adv-title">Поддержка 10–17</div>
+        <div class="adv-desc">Консультация по ассортименту. <%= site.hours.text %>.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-white">
+  <div class="container" style="max-width:820px;">
+    <h2 class="section-title" style="margin-bottom:8px;">Часто задаваемые вопросы</h2>
+    <p class="section-sub" style="margin-bottom:32px;">Ответы на популярные вопросы о заказе, доставке и оплате</p>
+    <div style="display:grid;gap:12px;">
+      <details style="background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);padding:20px 24px;">
+        <summary style="font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">Как сделать заказ в КанцМаркет? <span style="color:var(--accent);font-size:20px;">+</span></summary>
+        <p style="margin-top:12px;color:var(--gray);line-height:1.7;">Оформить заказ можно через форму на сайте, по телефону <a href="tel:+380441234567">044 123-45-67</a> или через Viber/WhatsApp <a href="tel:+380671234567">067 123-45-67</a>. Ответим в течение 15 минут в рабочее время.</p>
+      </details>
+      <details style="background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);padding:20px 24px;">
+        <summary style="font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">Сколько стоит доставка по Киеву? <span style="color:var(--accent);font-size:20px;">+</span></summary>
+        <p style="margin-top:12px;color:var(--gray);line-height:1.7;">Доставка курьером по Киеву — 80 грн. При заказе от 800 грн доставка <strong>бесплатная</strong>. Срок — от 2 часов.</p>
+      </details>
+      <details style="background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);padding:20px 24px;">
+        <summary style="font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">Какие способы оплаты принимает КанцМаркет? <span style="color:var(--accent);font-size:20px;">+</span></summary>
+        <p style="margin-top:12px;color:var(--gray);line-height:1.7;">Принимаем оплату наличными, картой Visa/MasterCard, через Приват24 и MonoBank, а также оплату при получении.</p>
+      </details>
+      <details style="background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);padding:20px 24px;">
+        <summary style="font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">Как долго доставляются товары по Украине? <span style="color:var(--accent);font-size:20px;">+</span></summary>
+        <p style="margin-top:12px;color:var(--gray);line-height:1.7;">Доставка по Украине осуществляется Новой Почтой или Укрпочтой. Срок — 1–2 рабочих дня.</p>
+      </details>
+      <details style="background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);padding:20px 24px;">
+        <summary style="font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">Можно ли забрать заказ самовывозом? <span style="color:var(--accent);font-size:20px;">+</span></summary>
+        <p style="margin-top:12px;color:var(--gray);line-height:1.7;">Да, самовывоз бесплатный. Адрес: <%= site.address.city %>, <%= site.address.street %>, <%= site.address.office %>. Товар готов через 1 час после оформления заказа.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<%- include('../partials/foot', { fullFooter: true }) %>

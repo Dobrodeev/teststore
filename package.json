@@ -1,5 +1,25 @@
 {
+  "name": "kanzmarket",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "seed": "node scripts/seed.js",
+    "db:init": "node scripts/local-db.mjs init",
+    "db:start": "node scripts/local-db.mjs start",
+    "db:stop": "node scripts/local-db.mjs stop",
+    "export": "node scripts/export-static.mjs",
+    "firebase:deploy": "npm run seed && npm run export && npx firebase-tools deploy --only hosting"
+  },
   "dependencies": {
-    "firebase-admin": "^14.1.0"
+    "compression": "^1.8.2",
+    "datatables.net-dt": "^3.1.5",
+    "datatables.net-responsive-dt": "^4.1.1",
+    "dotenv": "^18.0.10",
+    "ejs": "^7.0.2",
+    "express": "^5.3.0",
+    "firebase-admin": "^14.1.0",
+    "pg": "^8.23.1"
   }
 }

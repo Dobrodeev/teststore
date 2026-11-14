@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= meta.title %></title>
+  <meta name="description" content="<%= meta.description %>">
+<% if (meta.keywords) { -%>
+  <meta name="keywords" content="<%= meta.keywords %>">
+<% } -%>
+<% if (meta.noindex) { -%>
+  <meta name="robots" content="noindex">
+<% } else { -%>
+  <link rel="canonical" href="<%= site.url + meta.path %>">
+<% } -%>
+  <meta property="og:title" content="<%= meta.ogTitle || meta.title %>">
+  <meta property="og:description" content="<%= meta.ogDescription || meta.description %>">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="<%= site.url + meta.path %>">
+  <meta property="og:image" content="<%= site.url + site.ogImage %>">
+  <meta property="og:locale" content="ru_UA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="<%= meta.ogTitle || meta.title %>">
+  <meta name="twitter:description" content="<%= meta.ogDescription || meta.description %>">
+  <meta name="twitter:image" content="<%= site.url + site.ogImage %>">
+<% (locals.jsonLd || []).forEach((item) => { -%>
+  <script type="application/ld+json"><%- toJson(item) %></script>
+<% }) -%>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700&family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<% (locals.styles || []).forEach((href) => { -%>
+  <link rel="stylesheet" href="<%= href %>?v=<%= v %>">
+<% }) -%>
+  <link rel="stylesheet" href="/css/style.css?v=<%= v %>">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="header-top">
+    <a href="/" class="logo">
+      <div class="logo-icon"><i data-lucide="pencil"></i></div>
+      <div>
+        <div class="logo-text">Канц<span>Маркет</span></div>
+        <div class="logo-sub">Канцтовары в Киеве</div>
+      </div>
+    </a>
+    <form class="search-box" id="search-form" role="search" action="/catalog">
+      <input type="text" id="search-input" name="q" placeholder="Найти ручки, тетради, маркеры..." aria-label="Поиск">
+      <button type="submit" aria-label="Найти"><i data-lucide="search"></i></button>
+    </form>
+    <div class="header-actions">
+      <a href="/kontakty" class="btn-icon">
+        <i data-lucide="phone"></i>
+        <span>Контакты</span>
+      </a>
+      <button class="btn-icon cart-btn" onclick="openCart()" aria-label="Корзина">
+        <i data-lucide="shopping-cart"></i>
+        <span>Корзина</span>
+        <span class="cart-count" style="display:none">0</span>
+      </button>
+    </div>
+    <button class="burger" id="burger" aria-label="Меню">
+      <i data-lucide="menu"></i>
+    </button>
+  </div>
+  <nav class="header-nav" id="header-nav">
+    <div class="container">
+      <a href="/"<%- active === 'home' ? ' class="active"' : '' %>>Главная</a>
+      <a href="/catalog"<%- active === 'catalog' ? ' class="active"' : '' %>>Каталог</a>
+      <a href="/catalog?cat=ruchki">Ручки</a>
+      <a href="/catalog?cat=tetradi">Тетради</a>
+      <a href="/catalog?cat=bumaga">Бумага</a>
+      <a href="/catalog?cat=ofis">Офис</a>
+      <a href="/catalog?cat=risovanie">Рисование</a>
+      <a href="/price"<%- active === 'price' ? ' class="active"' : '' %>>Прайс-лист</a>
+      <a href="/o-nas"<%- active === 'about' ? ' class="active"' : '' %>>О нас</a>
+      <a href="/kontakty"<%- active === 'contacts' ? ' class="active"' : '' %>>Контакты</a>
+    </div>
+  </nav>
+</header>

@@ -868,3 +868,37 @@ footer ul a:hover { color: var(--accent); }
   .products-grid { grid-template-columns: repeat(2, 1fr); }
   .hero { padding: 48px 20px; }
 }
+
+/* ===== Express-версия: каталог, форма заявки, прайс-лист (DataTables) ===== */
+[hidden] { display: none !important; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.form-cart-note { background: var(--accent-light); border-radius: 8px; padding: 10px 14px; font-size: 13px; margin-bottom: 16px; }
+.form-status { min-height: 20px; margin-top: 10px; font-size: 14px; color: var(--gray); }
+.form-status-ok { color: var(--green); font-weight: 600; }
+.form-status-error { color: var(--red); font-weight: 600; }
+
+.price-table-wrap { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
+table.dataTable.price-table { border-collapse: collapse; font-size: 14px; }
+table.dataTable.price-table thead th { font-family: 'Rubik', sans-serif; font-weight: 600; font-size: 13px; color: var(--gray); border-bottom: 2px solid var(--border); }
+table.dataTable.price-table tbody td { vertical-align: middle; border-top: 1px solid var(--border); padding: 10px; }
+table.dataTable.price-table tbody tr:hover > * { box-shadow: inset 0 0 0 9999px rgba(245, 158, 11, .06); }
+.price-table .price-cell { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.price-table .price-now { font-weight: 700; }
+.price-table .price-old { color: var(--gray); text-decoration: line-through; font-size: 12px; margin-right: 6px; }
+.price-table .stock { font-size: 13px; font-weight: 600; white-space: nowrap; }
+.price-table .stock-yes { color: var(--green); }
+.price-table .stock-no { color: var(--red); }
+.price-table .cart-cell { width: 52px; text-align: right; }
+.price-table-wrap .dt-search input,
+.price-table-wrap .dt-length select { border: 1.5px solid var(--border); border-radius: 8px; padding: 8px 12px; font: inherit; background: var(--white); min-height: 40px; }
+.price-table-wrap .dt-search input { min-width: 220px; }
+.price-table-wrap .dt-search input:focus,
+.price-table-wrap .dt-length select:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
+.price-table-wrap .dt-info { color: var(--gray); font-size: 13px; }
+.price-table-wrap .dt-paging .dt-paging-button { border-radius: 8px !important; min-width: 40px; min-height: 40px; }
+.price-table-wrap .dt-paging .dt-paging-button.current { background: var(--accent) !important; border-color: var(--accent) !important; color: var(--primary) !important; font-weight: 700; }
+@media (max-width: 768px) {
+  .price-table-wrap { padding: 12px; }
+  .price-table-wrap .dt-search input { min-width: 0; width: 100%; }
+}

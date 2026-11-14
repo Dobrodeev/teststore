@@ -1,0 +1,79 @@
+<% if (locals.fullFooter) { -%>
+<footer>
+  <div class="footer-grid">
+    <div class="footer-about">
+      <div class="footer-logo">
+        <div class="logo-icon"><i data-lucide="pencil"></i></div>
+        <div class="logo-text">Канц<span>Маркет</span></div>
+      </div>
+      <p>Интернет-магазин канцтоваров в Киеве. Ручки, тетради, бумага, маркеры, товары для рисования и офиса.</p>
+    </div>
+    <div>
+      <h4>Каталог</h4>
+      <ul>
+        <li><a href="/catalog?cat=ruchki">Ручки и карандаши</a></li>
+        <li><a href="/catalog?cat=tetradi">Тетради и блокноты</a></li>
+        <li><a href="/catalog?cat=papki">Папки и файлы</a></li>
+        <li><a href="/catalog?cat=bumaga">Бумага и картон</a></li>
+        <li><a href="/catalog?cat=markery">Маркеры</a></li>
+        <li><a href="/catalog?cat=risovanie">Рисование</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Информация</h4>
+      <ul>
+        <li><a href="/o-nas">О нас</a></li>
+        <li><a href="/price">Прайс-лист</a></li>
+        <li><a href="/kontakty">Контакты</a></li>
+        <li><a href="/kontakty">Доставка</a></li>
+        <li><a href="/politika">Политика конфиденциальности</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Контакты</h4>
+      <ul>
+        <li><a href="tel:<%= site.phone.tel %>" class="footer-phone"><%= site.phone.display %></a></li>
+        <li><a href="mailto:<%= site.email %>"><%= site.email %></a></li>
+        <li style="color:#64748B; font-size:13px; margin-top:8px;"><%= site.address.city %>, <%= site.address.street %></li>
+        <li style="color:#64748B; font-size:13px; margin-top:4px;"><%= site.hours.text %></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <%= year %> КанцМаркет — Канцтовары в Киеве</span>
+    <a href="/politika">Политика конфиденциальности</a>
+  </div>
+</footer>
+<% } else { -%>
+<footer>
+  <div class="footer-bottom" style="max-width:1160px; margin:0 auto; padding:24px 20px; border-top:none; justify-content:center;">
+    <span>© <%= year %> КанцМаркет — <a href="/" style="color:#64748B">Канцтовары в Киеве</a></span>
+  </div>
+</footer>
+<% } -%>
+
+<div class="cart-overlay" id="cart-overlay"></div>
+<div class="cart-panel" id="cart-panel">
+  <div class="cart-header">
+    <h3><i data-lucide="shopping-cart"></i> Корзина</h3>
+    <button class="cart-close" onclick="closeCart()" aria-label="Закрыть корзину"><i data-lucide="x"></i></button>
+  </div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Итого:</span>
+      <span class="cart-total-val" id="cart-total">0 грн</span>
+    </div>
+    <a href="/kontakty#order-form" class="btn btn-primary btn-full" onclick="closeCart()">Оформить заказ</a>
+  </div>
+</div>
+
+<% if (locals.clientProducts) { -%>
+<script>window.PRODUCTS = <%- toJson(clientProducts) %>;</script>
+<% } -%>
+<script src="/js/app.js?v=<%= v %>"></script>
+<% (locals.scripts || []).forEach((src) => { -%>
+<script src="<%= src %>?v=<%= v %>"></script>
+<% }) -%>
+</body>
+</html>

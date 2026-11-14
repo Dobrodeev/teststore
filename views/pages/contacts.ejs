@@ -1,0 +1,140 @@
+<%- include('../partials/head') %>
+
+<div class="breadcrumb">
+  <div class="container">
+    <a href="/">Главная</a>
+    <i data-lucide="chevron-right"></i>
+    <span>Контакты</span>
+  </div>
+</div>
+
+<section class="section section-white">
+  <div class="container">
+    <h1 style="font-family:'Rubik',sans-serif; font-size:clamp(22px,4vw,34px); font-weight:800; margin-bottom:8px;">Контакты и заказ</h1>
+    <p style="color:var(--gray); margin-bottom:36px;">Свяжитесь с нами любым удобным способом или оставьте заявку онлайн</p>
+
+    <div class="contacts-grid">
+      <!-- Контактная информация -->
+      <div class="contact-block">
+        <h3>Наши контакты</h3>
+        <div class="contact-row">
+          <div class="contact-icon-wrap"><i data-lucide="phone"></i></div>
+          <div>
+            <div class="contact-label">Телефон для заказов</div>
+            <div class="contact-val"><a href="tel:<%= site.phone.tel %>"><%= site.phone.display %></a></div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon-wrap"><i data-lucide="smartphone"></i></div>
+          <div>
+            <div class="contact-label">Viber / WhatsApp</div>
+            <div class="contact-val"><a href="tel:<%= site.messenger.tel %>"><%= site.messenger.display %></a></div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon-wrap"><i data-lucide="mail"></i></div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-val"><a href="mailto:<%= site.email %>"><%= site.email %></a></div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon-wrap"><i data-lucide="map-pin"></i></div>
+          <div>
+            <div class="contact-label">Адрес</div>
+            <div class="contact-val"><%= site.address.city %>, <%= site.address.street %>, <%= site.address.office %></div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon-wrap"><i data-lucide="clock"></i></div>
+          <div>
+            <div class="contact-label">Часы работы</div>
+            <div class="contact-val" style="font-weight:400;">
+              <%= site.hours.text %><br>
+              <span style="color:var(--gray); font-size:13px;">Суббота, воскресенье: выходной</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Карта -->
+        <div style="margin-top:20px; border-radius:var(--radius); overflow:hidden; border:1px solid var(--border); background:var(--gray-light);">
+          <iframe
+            src="<%= site.mapsEmbedUrl %>"
+            title="КанцМаркет на карте Google"
+            width="100%" height="260" style="border:0; display:block;"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+        <a class="btn btn-outline btn-full" style="margin-top:12px;" target="_blank" rel="noopener"
+           href="<%= site.mapsUrl %>">
+          <i data-lucide="map-pin"></i> Открыть в Google Картах
+        </a>
+      </div>
+
+      <!-- Форма заказа -->
+      <div class="contact-block" id="order-form">
+        <h3>Оформить заказ / задать вопрос</h3>
+        <p style="color:var(--gray); font-size:13px; margin-bottom:20px;">Оставьте заявку — ответим в течение 15 минут в рабочее время</p>
+        <form id="order-form-el" novalidate data-phone="<%= site.phone.display %>">
+          <p class="form-cart-note" id="form-cart-note" hidden></p>
+          <div class="form-group">
+            <label for="f-name">Ваше имя *</label>
+            <input type="text" id="f-name" autocomplete="name" maxlength="120" placeholder="Иван Петрович" required>
+          </div>
+          <div class="form-group">
+            <label for="f-phone">Телефон *</label>
+            <input type="tel" id="f-phone" autocomplete="tel" maxlength="40" placeholder="+38 0XX XXX XX XX" required>
+          </div>
+          <div class="form-group">
+            <label for="f-email">Email</label>
+            <input type="email" id="f-email" autocomplete="email" maxlength="160" placeholder="email@example.com">
+          </div>
+          <div class="form-group">
+            <label for="f-type">Тип запроса</label>
+            <select id="f-type">
+              <option>Заказ товаров</option>
+              <option>Корпоративная поставка</option>
+              <option>Уточнение наличия</option>
+              <option>Другое</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="f-msg">Сообщение</label>
+            <textarea id="f-msg" maxlength="2000" placeholder="Опишите, что вас интересует: список товаров, количество, срочность..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="order-submit">Отправить заявку</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          <p class="form-note" style="margin-top:10px;">Нажимая кнопку, вы соглашаетесь с <a href="/politika">политикой конфиденциальности</a></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Доставка -->
+    <div style="margin-top:50px;">
+      <h2 style="font-family:'Rubik',sans-serif; font-size:22px; font-weight:800; margin-bottom:20px;">Доставка и оплата</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px;">
+        <div class="adv-card">
+          <div class="adv-icon-wrap"><i data-lucide="bike"></i></div>
+          <div class="adv-title">Курьер по Киеву</div>
+          <div class="adv-desc">Доставка от 2 часов. Стоимость 80 грн. Бесплатно при заказе от 800 грн.</div>
+        </div>
+        <div class="adv-card">
+          <div class="adv-icon-wrap"><i data-lucide="package"></i></div>
+          <div class="adv-title">Новая Почта</div>
+          <div class="adv-desc">Доставка по Украине. Тарифы перевозчика. 1–2 рабочих дня.</div>
+        </div>
+        <div class="adv-card">
+          <div class="adv-icon-wrap"><i data-lucide="store"></i></div>
+          <div class="adv-title">Самовывоз</div>
+          <div class="adv-desc">Бесплатно. <%= site.address.city %>, <%= site.address.street %>. Товар готов через 1 час.</div>
+        </div>
+        <div class="adv-card">
+          <div class="adv-icon-wrap"><i data-lucide="credit-card"></i></div>
+          <div class="adv-title">Оплата</div>
+          <div class="adv-desc">Наличными, картой Visa/MasterCard, Приват24, MonoBank. Оплата при получении.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('../partials/foot') %>

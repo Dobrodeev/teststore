@@ -1,0 +1,80 @@
+<%- include('../partials/head') %>
+
+<div class="breadcrumb">
+  <div class="container">
+    <a href="/">Главная</a>
+    <i data-lucide="chevron-right"></i>
+    <span id="bc-current">Каталог</span>
+  </div>
+</div>
+
+<section class="section" style="padding-top:32px;">
+  <div class="container">
+    <h1 style="font-family:'Rubik',sans-serif; font-size:clamp(22px,4vw,30px); font-weight:800; margin-bottom:20px;">Каталог канцтоваров</h1>
+    <div class="catalog-layout">
+
+      <!-- Фильтры -->
+      <aside>
+        <div class="filters-panel">
+          <div class="filter-title">Категории</div>
+          <div class="filter-list" id="cat-filter">
+            <button class="filter-item active" data-cat="all">
+              Все товары <span class="filter-count" id="cnt-all"><%= products.length %></span>
+            </button>
+<% categories.forEach((c) => { -%>
+            <button class="filter-item" data-cat="<%= c.id %>" data-name="<%= c.name %>">
+              <i data-lucide="<%= c.lucideIcon %>"></i> <%= c.name %> <span class="filter-count"><%= c.count %></span>
+            </button>
+<% }) -%>
+          </div>
+          <div class="filter-title" style="margin-top:20px;">Наличие</div>
+          <div class="filter-list">
+            <button class="filter-item active" data-stock="all" id="stock-all">Все</button>
+            <button class="filter-item" data-stock="yes" id="stock-yes">В наличии</button>
+          </div>
+          <div class="filter-title" style="margin-top:20px;">Акции</div>
+          <div class="filter-list">
+            <button class="filter-item" data-badge="Хит" id="badge-hit">
+              <i data-lucide="flame"></i> Хиты
+            </button>
+            <button class="filter-item" data-badge="Скидка" id="badge-sale">
+              <i data-lucide="tag"></i> Скидки
+            </button>
+            <button class="filter-item" data-badge="Топ" id="badge-top">
+              <i data-lucide="star"></i> Топ
+            </button>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Товары -->
+      <div>
+        <div class="catalog-top">
+          <div class="catalog-count" id="catalog-count">Найдено: <%= products.length %></div>
+          <div class="catalog-sort">
+            <select id="sort-select" aria-label="Сортировка">
+              <option value="default">По умолчанию</option>
+              <option value="price-asc">Цена: по возрастанию</option>
+              <option value="price-desc">Цена: по убыванию</option>
+              <option value="name">По алфавиту</option>
+            </select>
+          </div>
+        </div>
+        <div class="products-grid" id="catalog-grid">
+<% products.forEach((p, i) => { -%>
+<%- include('../partials/product-card', { p }) %>
+<% }) -%>
+          <div class="no-results" id="no-results" hidden>
+            <i data-lucide="search-x" style="width:56px;height:56px;stroke:var(--border);margin:0 auto 16px;"></i>
+            <h3>Ничего не найдено</h3>
+            <p>Попробуйте изменить критерии поиска или выбрать другую категорию</p>
+            <button class="btn btn-outline" style="margin-top:20px" id="reset-filters">Сбросить фильтры</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<%- include('../partials/foot') %>

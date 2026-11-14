@@ -1,0 +1,32 @@
+<% const badgeClass = { 'Хит': 'badge-hit', 'Топ': 'badge-top', 'Скидка': 'badge-sale' }[p.badge] || ''; -%>
+<div class="product-card" data-id="<%= p.id %>" data-cat="<%= p.category %>" data-badge="<%= p.badge || '' %>" data-stock="<%= p.inStock ? 'yes' : 'no' %>" data-price="<%= p.price %>" data-name="<%= p.name %>" data-search="<%= (p.name + ' ' + p.desc).toLowerCase() %>">
+<% if (p.badge) { -%>
+  <span class="product-badge <%= badgeClass %>"><%= p.badge %></span>
+<% } -%>
+  <div class="product-img" style="background:<%= p.color || '#F8FAFC' %>">
+<% if (p.img) { -%>
+    <img src="<%= p.img %>" alt="<%= p.name %>" class="product-img-photo" loading="lazy">
+<% } else { -%>
+    <div class="product-img-circle"></div><i data-lucide="<%= p.icon %>" class="product-icon-svg" style="color:<%= p.iconColor %>"></i>
+<% } -%>
+  </div>
+  <div class="product-body">
+    <div class="product-name"><%= p.name %></div>
+    <div class="product-desc"><%= p.desc %></div>
+    <div class="product-footer">
+      <div class="product-price-wrap">
+<% if (p.oldPrice) { -%>
+        <div class="product-old-price"><%= money(p.oldPrice) %> грн</div>
+<% } -%>
+        <div class="product-price"><%= money(p.price) %> грн</div>
+        <div class="product-unit">за <%= p.unit %></div>
+<% if (!p.inStock) { -%>
+        <div class="product-out">Нет в наличии</div>
+<% } -%>
+      </div>
+      <button class="btn-cart" title="В корзину" aria-label="Добавить в корзину: <%= p.name %>" onclick="addToCart(<%= p.id %>)"<%= p.inStock ? '' : ' disabled' %> id="cart-btn-<%= p.id %>">
+        <i data-lucide="shopping-cart" class="btn-cart-icon"></i>
+      </button>
+    </div>
+  </div>
+</div>

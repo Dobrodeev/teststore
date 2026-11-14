@@ -9,7 +9,15 @@ function refreshIcons() {
 const Cart = {
   items: JSON.parse(localStorage.getItem('kanz_cart') || '[]'),
 
-  save() { localStorage.setItem('kanz_cart', JSON.stringify(this.items)); },
+  save() {
+    localStorage.setItem('kanz_cart', JSON.stringify(this.items));
+    document.dispatchEvent(new CustomEvent('cart:change'));
+  },
+
+  clear() {
+    this.items = [];
+    this.save(); this.updateUI(); this.renderPanel();
+  },
 
   add(product) {
     const exist = this.items.find(i => i.id === product.id);
@@ -52,7 +60,7 @@ const Cart = {
         <div class="cart-empty">
           <i data-lucide="shopping-cart" class="cart-empty-icon-svg"></i>
           <p style="margin-bottom:16px;">Корзина пуста</p>
-          <a href="catalog.html" class="btn btn-primary btn-sm" onclick="closeCart()">Перейти в каталог</a>
+          <a href="/catalog" class="btn btn-primary btn-sm" onclick="closeCart()">Перейти в каталог</a>
         </div>`;
     } else {
       el.innerHTML = this.items.map(item => `
@@ -113,43 +121,9 @@ function closeCart() {
   document.getElementById('cart-panel')?.classList.remove('open');
 }
 
-// ---- Рендер карточки товара с SVG иллюстрацией ----
-function renderProductCard(p) {
-  const badgeClass = { 'Хит': 'badge-hit', 'Топ': 'badge-top', 'Скидка': 'badge-sale' }[p.badge] || '';
-  const disabled = !p.inStock ? 'disabled' : '';
-
-  return `
-    <div class="product-card" data-id="${p.id}" data-cat="${p.category}">
-      ${p.badge ? `<span class="product-badge ${badgeClass}">${p.badge}</span>` : ''}
-      <div class="product-img" style="background:${p.color || '#F8FAFC'}">
-        ${p.img
-          ? `<img src="${p.img}" alt="${p.name}" class="product-img-photo" loading="lazy">`
-          : `<div class="product-img-circle"></div><i data-lucide="${p.icon}" class="product-icon-svg" style="color:${p.iconColor}"></i>`
-        }
-      </div>
-      <div class="product-body">
-        <div class="product-name">${p.name}</div>
-        <div class="product-desc">${p.desc}</div>
-        <div class="product-footer">
-          <div class="product-price-wrap">
-            ${p.oldPrice ? `<div class="product-old-price">${p.oldPrice} грн</div>` : ''}
-            <div class="product-price">${p.price.toLocaleString('ru')} грн</div>
-            <div class="product-unit">за ${p.unit}</div>
-            ${!p.inStock ? `<div class="product-out">Нет в наличии</div>` : ''}
-          </div>
-          <button class="btn-cart" title="В корзину"
-            onclick="addToCart(${p.id})"
-            ${disabled}
-            id="cart-btn-${p.id}">
-            <i data-lucide="shopping-cart" class="btn-cart-icon"></i>
-          </button>
-        </div>
-      </div>
-    </div>`;
-}
-
 // ---- Добавить в корзину ----
-let _products = [];
+// Товары страницы сервер передаёт в window.PRODUCTS
+let _products = window.PRODUCTS || [];
 function addToCart(id) {
   const p = _products.find(x => x.id === id);
   if (!p) return;
@@ -174,7 +148,7 @@ function initSearch() {
   form.addEventListener('submit', e => {
     e.preventDefault();
     const q = document.getElementById('search-input').value.trim();
-    if (q) window.location.href = `catalog.html?q=${encodeURIComponent(q)}`;
+    if (q) window.location.href = `/catalog?q=${encodeURIComponent(q)}`;
   });
 }
 

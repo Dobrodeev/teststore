@@ -1,0 +1,58 @@
+<%- include('../partials/head') %>
+
+<div class="breadcrumb">
+  <div class="container">
+    <a href="/">Главная</a>
+    <i data-lucide="chevron-right"></i>
+    <span>Прайс-лист</span>
+  </div>
+</div>
+
+<section class="section section-white">
+  <div class="container">
+    <h1 style="font-family:'Rubik',sans-serif; font-size:clamp(22px,4vw,34px); font-weight:800; margin-bottom:8px;">Прайс-лист на канцтовары</h1>
+    <p style="color:var(--gray); margin-bottom:28px;">Все товары магазина в одной таблице: ищите по названию или категории, сортируйте по цене и добавляйте в корзину.</p>
+
+    <div class="price-table-wrap">
+      <table id="price-table" class="display price-table" style="width:100%">
+        <thead>
+          <tr>
+            <th>Товар</th>
+            <th>Категория</th>
+            <th>Цена</th>
+            <th>Ед.</th>
+            <th>Наличие</th>
+            <th><span class="visually-hidden">В корзину</span></th>
+          </tr>
+        </thead>
+        <tbody>
+<% products.forEach((p) => { -%>
+          <tr>
+            <td><%= p.name %></td>
+            <td><a href="/catalog?cat=<%= p.category %>"><%= p.categoryName %></a></td>
+            <td data-order="<%= p.price %>" class="price-cell">
+<% if (p.oldPrice) { -%>
+              <span class="price-old"><%= money(p.oldPrice) %> грн</span>
+<% } -%>
+              <span class="price-now"><%= money(p.price) %> грн</span>
+            </td>
+            <td><%= p.unit %></td>
+            <td data-order="<%= p.inStock ? 0 : 1 %>">
+              <span class="stock <%= p.inStock ? 'stock-yes' : 'stock-no' %>"><%= p.inStock ? 'В наличии' : 'Нет в наличии' %></span>
+            </td>
+            <td class="cart-cell">
+              <button class="btn-cart" title="В корзину" aria-label="Добавить в корзину: <%= p.name %>" onclick="addToCart(<%= p.id %>)"<%= p.inStock ? '' : ' disabled' %> id="cart-btn-<%= p.id %>">
+                <i data-lucide="shopping-cart" class="btn-cart-icon"></i>
+              </button>
+            </td>
+          </tr>
+<% }) -%>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="color:var(--gray); font-size:13px; margin-top:20px;">Цены указаны в гривнах. Наличие и итоговую стоимость заказа подтверждает менеджер.</p>
+  </div>
+</section>
+
+<%- include('../partials/foot') %>
